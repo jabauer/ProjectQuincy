@@ -1,0 +1,385 @@
+/*colors scheme
+the following colors are used throughout the stylesheet
+and are presented here as classes*/
+
+.brown	{color: #736346;}
+.blue 	{color: #465B73;}
+.beige	{color: #FFF4D4;}
+.green	{color: #5B806B;}
+.purple	{color: #342140;}
+
+body {
+    font-family: arial,  helvetica, sans-serif;
+	background-image: url(../images/oldpaper.jpg);
+}
+
+#allcontent {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+	background-image: url(../images/GhostedBrown.png);
+}
+
+img {
+	border:none;
+}
+
+#header {
+	height: 120px;
+	background: #FFF4D4;
+	margin:0;
+	padding: 0;
+	border-top: thick solid #736346;
+	border-bottom: thick solid #736346;
+}
+
+#header a.login {
+	float: right;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: .7em;
+	color: #342140;
+	margin: 5px 10px;
+}
+
+#header a:hover{
+	color: #5B806B;
+}
+
+#header img.logo {
+    display: block;
+	float: left;
+	margin: 0px 0px -20px 20px;
+	padding: 0px;
+}
+
+#header img.text {
+	display: block;
+	margin: 0 20px;
+	padding-top: 30px;
+}
+
+#nav {
+	float: right;
+	margin-top: 5px;
+}
+
+#nav ul {
+	background-image: url(../images/GhostedBlue.png);
+	border-top-left-radius: 10px;
+	padding: 10px;
+	margin:0;
+	list-style-type: none;
+}
+
+#nav ul li {
+	display: inline;
+	text-align: center;	
+	padding: 10px 22px 0px 22px;
+	text-decoration: none;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+#nav ul li a {
+	text-decoration: none;
+	font-size: 1em;
+	color: #FFF4D4;
+}
+
+#nav ul li a:hover {
+	color: #FFF4D4;
+	border-bottom: double;
+}
+
+#main-wrapper {
+	padding: 0 20px;
+	margin: 0 auto;
+	font-size: .8em;
+}
+
+#main-wrapper h1 {
+	color: #736346;
+}
+
+#main-wrapper h1.vis {
+	color: #342140;
+	margin-bottom: -10px;
+}
+
+#main-wrapper h3 {
+    color: #5B806B;
+}
+
+#main-wrapper h4 {
+	color: #465B73;
+	font-size: 1.1em;
+}
+
+#main-wrapper h3.browse_title {
+	color: #736346;
+}
+
+#all_text {
+	width: 1100px;
+	margin: 20px auto;
+	padding: 20px;
+	background: #FFF4D4;
+	border-top: double #342140;
+	color: #333;
+}
+
+#all_text a {
+	color: #5B806B;
+}
+
+.main_page {
+	float:left;
+	border:thick double #5B806B;
+	border-radius: 10px;
+	margin-right: 40px;
+}
+
+#front_text {
+	float: right;
+	height: 400px;
+}
+
+#content {
+    float:right;
+    width: 830px;
+	margin: 20px;
+	padding: 10px;
+	background: #FFF4D4;
+	border-top: double #342140;
+	color: #333;
+}
+
+#image {
+    float:right;
+    display:inline;
+    padding: 0 0 20px 20px;
+    margin: 0 20px;
+}
+
+#image p {
+	font-size: .7em;
+	text-align: center;
+	color: #666;
+}
+
+p.caption {
+	font-size:.7em;
+	text-align: center;
+	color: #666;
+}
+
+#content a {
+	color: #5B806B;	
+}
+
+.browse_list a {
+	padding: 10px;
+}
+
+#content table {
+	margin: 0;
+}
+
+#content th {
+	padding: 5px 0px 5px 10px;
+	text-align: left;
+}
+
+#content table.five_columns th {
+	width: 140px;
+}
+
+#content th.field_name {
+	color: #465B73;
+}
+
+#content h3.field_name {
+	color: #736346;
+}
+
+#content h1.construction {
+	color: #5B806B;
+	font-family: courier;
+	text-align:center;
+	font-weight:normal;
+}
+
+#content img.construction {
+	float:none;
+	display:block;
+	margin: 0 auto;
+}
+
+#content tr {
+	vertical-align: text-top;
+}
+
+#content td {
+	padding: 5px 0px 5px 10px;
+	text-align: left;
+}
+
+#content ul {
+	list-style-type:none;
+}
+
+#content ul li {
+	margin-bottom: 10px;
+}
+
+.search_param {
+	color: #465B73;
+	font-weight:bold;
+}
+
+
+#vis td {
+	vertical-align: top;
+}
+
+#vis td.desc {
+	padding: 0 30px;
+}
+
+#vis h4 {
+	margin-top: 5px;
+	margin-bottom: -10px;
+}
+
+#sidebar {
+    float:left;
+    width: 200px;
+	margin: 20px;
+	padding: 10px;
+	background: #FFF4D4;
+	border-top: double #342140;
+	word-wrap: break-word;
+}
+
+#sidebar h3 {
+	color: #465B73;
+}
+
+#sidebar a {
+	color: #5B806B;
+}
+
+#sidebar ul {
+	list-style-type: none;
+}
+
+#sidebar ul.field_data {
+	padding-top: -7px;
+}
+
+#sidebar ul.field_data li {
+	margin-left: -20px;
+	padding-bottom: 5px;
+}
+
+#sidebar ul li {
+	margin-left: -40px;
+}
+
+#sidebar p.browse {
+	color: #736346;
+}
+
+#sidebar .field_name {
+	color: #736346;
+	font-weight: bold;
+}
+
+#footer {
+    clear:both;
+	background: #FFF4D4;
+	text-align:center;
+	padding: 0;
+	margin:0;
+	color: #465B73;
+	border-top: 2px solid #736346;
+	border-bottom: thick solid #736346;
+	font-size: .9em;
+}
+
+.title {
+	font-style: italic;
+}
+
+#footer a {
+	color: #5B806B;
+	font-style:italic;
+}
+
+#map {
+	width: 250px;
+	max-height: 250px;
+	overflow: auto; 
+	font-size: .9em;
+	padding: 15px;
+	background: #FFF4D4;
+	color: #333;
+}
+
+#map h3 {
+	color: #736346;
+}
+
+#map_canvas_lg {
+	font-size: .8em;
+}
+
+#map_canvas_lg a {
+	color: #5B806B;
+}
+
+/* The next few ids are for styling the image carousel on the Explore Page */
+
+#carousel1 {
+	margin: 0 auto;
+}
+
+#title-text {
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #FFF4D4;
+	margin: 20px 0 0px 30px;
+}
+
+#alt-text {
+	font-weight: bold;
+	color: #FFF4D4;
+	margin-left: 30px;
+}
+
+#footnote {
+	font-size: .7em;
+	padding: 15px;
+	margin:0;
+	background: #FFF4D4;
+	color: #333;
+	border: thin dotted #342140;
+}
+
+#footnote h3 {
+	color: #465B73;
+}
+
+#footnote .field_name {
+	color: #736346;
+	font-weight:bold;
+}
+
+#post_content {
+	display: none;
+}
+
+.pagination {
+	float: right;
+}

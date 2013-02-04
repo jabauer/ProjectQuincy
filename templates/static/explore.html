@@ -1,0 +1,136 @@
+<!--This template contains the text and images for the site's Explore page. -->
+
+{% extends 'eafsd_browse.html' %}
+{% load url from future %}
+
+{% block title %}Explore | {{ block.super }}{% endblock %}
+{% block scripts%}
+		
+		<!-- stylesheet for colorbox jquery plugin -->
+		<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}styles/colorbox.css">
+
+		<!-- load jquery library from Google Content Network -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+		<script type="text/javascript" src="{{STATIC_URL}}javascript/cloud-carousel.1.0.5.js"></script>
+
+		<script>
+		$(document).ready(function(){			   
+			// This initialises carousels on the container elements specified, in this case, carousel1.
+			$("#carousel1").CloudCarousel(		
+				{	
+					reflHeight: 56,
+					reflGap:2,		
+					xPos: 350,
+					yPos: 100,
+					buttonLeft: $("#left-but"),
+					buttonRight: $("#right-but"),
+					altBox: $("#alt-text"),
+					titleBox: $("#title-text")
+				}
+			);
+		});
+		 
+		</script>
+
+
+		<script type="text/javascript" src="{{STATIC_URL}}javascript/jquery.colorbox-min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$(".diagrams").colorbox({rel:'diagrams', transition:"none", width:"90%", height:"90%"});
+		});
+		</script>
+
+{% endblock %}
+
+{% block main %}
+<div id="main">
+		<div id="content">
+		{% block content %}
+			<h1>Explore: A Gallery of Visual Experiments</h1>
+			<p>Visualizing data allows us to make hierarchies explicit and find unexpected patterns.  These visualizations are designed as discovery tools and visual indexes.  They are based off live data and provide links to relevant pages in the site.  They are designed as "first cuts" at the data and may be messy, but hopefully are also intriguing.  Over time, some of these may be refined and incorporated into other parts of the site, but for now, you can play with them here.</p>
+
+			<p>Wondering how all this information is stored?  Scroll down to view <a href="#schema">diagrams</a> showing how the EAFSD records information about people, places, organizations, primary and secondary sources, and their connections to each other</p>  
+
+			<table id="vis">
+				<tr>
+					<td class="image">
+						<a href="../assignment_bubble/"><img src="{{STATIC_URL}}images/bubble_thumbnail.jpeg"></a>
+					</td>
+					<td class="desc">
+						<h4>Which were the most popular titles?</h4>
+						<p>Between 1775 and 1825, the various American governments sent out foreign service officers under at least 45 distinct titles.  Some titles were only used once, while others were used tens or hundreds of times.  Click on the image to see all the foreign service titles displayed in a simple, space efficient Bubble Chart.
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="image">
+						<a href="../location_dendrogram/"><img src="{{STATIC_URL}}images/dendrogram_thumbnail.jpeg"></a>
+					</td>
+					<td class="desc">
+						<h4>Explore Locations</h4>
+						<p>The Early American Foreign Serivce Database contains around 200 locations.  This expanding tree diagram shows how the locations are are grouped into states and then continents.  Click on the image to get started.
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="image">
+						<a href="../location_circlepack/"><img src="{{STATIC_URL}}images/circlepack_thumbnail.jpeg"></a>
+					</td>
+					<td class="desc">
+						<h4>Where were people sent?</h4>
+						<p>This visualization uses a circle packing algorithm to display all the places foriegn service officers were assigned.  The size of the circle corresponds to the number of assignments sent to a given location.  Click on the image to see the full display.
+						</p>
+					</td>
+				</tr>
+			</table>
+
+			<a id="schema"></a>
+			<h3>The Data Model</h3>  
+			<p>The EAFSD uses a complex data model to describe the elements of the early American foreign service.  The database is divided into six principle sections or modules, in the language of database design.  The six modules are:</p>
+			<ul>
+				<li><span class="green"><b>Individuals</b></span> models how people relate to each other and their various occupations</li>
+				<li><span class="brown"><b>Locations</b></span> models towns and cities, including where they are located on the globe and in relationship to political and regional groupings</li>
+				<li><span style="color:#aaa"><b>Organizations</b></span> models groups of people</li>
+				<li><span style="color:#888"><b>Correspondence</b></span> models letters and the enclosures that were sent with them</li>
+				<li><span class="blue"><b>Assignments</b></span> records assignments in the foreign service (who was sent where, for what reason, and for what timespan)</li>
+				<li><span class="purple"><b>Validations</b></span> a citation system keeping track of primary and secondary sources and providing footnotes</li>
+			</ul>
+			<p>You can view the technical diagrams in the image carousel below, click on an image to see the diagram in a lightbox window.  You can also <a href="{{STATIC_URL}}images/diagrams/ProjectQuincy12-11-2012.pdf">download the diagrams</a>.</p>
+			<p>The underlying software for the EAFSD is an open source project called <a href="http://www.projectquincy.org">Project Quincy</a>.  Project Quincy is growing out of the code written to run the EAFSD, but is designed to be reused by historians who want to create their own websites tracing people, places, and organizations through time and space.</p>
+			<p>The color coded, annotated diagrams were generated with <a target="_blank" href="http://www.jeanbauer.com/davila.html">DAVILA</a>.</p>
+			<!-- This is the container for the carousel. -->
+	        <div id = "carousel1" style="width:700px; height:300px; background: url({{STATIC_URL}}images/GhostedBlue.png); overflow:scroll;">
+
+	            <!-- All images with class of "cloudcarousel" will be turned into carousel items -->
+	            <!-- You can place links around these images -->
+	            <a  class="diagrams" href="{{STATIC_URL}}images/diagrams/AllModules.jpg" title="All Modules"><img class = "cloudcarousel" src="{{STATIC_URL}}images/diagrams/AllModules.jpg" alt="Diagram of all Modules" title="All Modules" width="164", height="128"/></a>
+	            <a class="diagrams" href="{{STATIC_URL}}images/diagrams/AllEntities.jpg" title="All Entities"><img class = "cloudcarousel" src="{{STATIC_URL}}images/diagrams/AllEntities.jpg" alt="Diagram of all Entities" title="All Entities" width="164", height="128"/></a>
+	            <a class="diagrams" href="{{STATIC_URL}}images/diagrams/LocationsModule.jpg" title="Locations"><img class = "cloudcarousel" src="{{STATIC_URL}}images/diagrams/LocationsModule.jpg" alt="Models geographic locations and their political/regional groupings." title="Locations" width="164", height="128"/></a>
+	            <a class="diagrams" href="{{STATIC_URL}}images/diagrams/IndividualsModule.jpg" title="Individuals"><img class = "cloudcarousel" src="{{STATIC_URL}}images/diagrams/IndividualsModule.jpg" alt="Models how people relate to each other and their various occupations" title="Individuals" width="164", height="128"/></a>
+	            <a class="diagrams" href="{{STATIC_URL}}images/diagrams/IndividualsWithResidences.jpg" title="Individuals with Locations"><img class = "cloudcarousel" src="{{STATIC_URL}}images/diagrams/IndividualsWithResidences.jpg" alt="Models where people lived" title="Individuals with Locations" width="164", height="128"/></a>
+	            <a class="diagrams" href="{{STATIC_URL}}images/diagrams/OrganizationsModule.jpg" title="Organizations"><img class = "cloudcarousel" src="{{STATIC_URL}}images/diagrams/OrganizationsModule.jpg" alt="Models how people are associated with different formalized groups" title="Organizations" width="164", height="128"/></a>
+	            <a class="diagrams" href="{{STATIC_URL}}images/diagrams/CorrespondenceModule.jpg" title="Correspondence"><img class = "cloudcarousel" src="{{STATIC_URL}}images/diagrams/CorrespondenceModule.jpg" alt="Models letters and and enclosures sent between people and organizations" title="Correspondence" width="164", height="128"/></a>
+	            <a class="diagrams" href="{{STATIC_URL}}images/diagrams/AssignmentsModule.jpg" title="Assignments"><img class = "cloudcarousel" src="{{STATIC_URL}}images/diagrams/AssignmentsModule.jpg" alt="Models assignments in the foreign service" title="Assignments" width="164", height="128"/></a>
+	            <a class="diagrams" href="{{STATIC_URL}}images/diagrams/ValidationsModule.jpg" title="Validations"><img class = "cloudcarousel" src="{{STATIC_URL}}images/diagrams/ValidationsModule.jpg" alt="The citation system." title="Validations" width="164", height="128"/></a>
+
+
+		        <!-- Define elements to accept the alt and title text from the images. -->
+		        <div id="title-text"></div>
+		        <div id="alt-text"></div>    
+			
+			
+		        <!-- Define left and right buttons. -->
+		        <input id="left-but"  type="button" value="Select" style="position:absolute;top:20px;right:50px;"/>
+		      <!--  <input id="right-but" type="button" value="Right" style="position:absolute;top:20px;right:50px;"/>   -->
+	        </div><!-- end carousel1 -->
+			<p class="caption">Spinning images courtesy of <a target="_blank" href="http://www.professorcloud.com/mainsite/carousel.htm">Cloud Carousel</a>.</p>
+		   
+		{% endblock %}
+		</div> <!-- end content -->
+		<div id="sidebar">
+		{% block sidebar%}{{ block.super }}{% endblock%}
+		</div> <!-- end sidebar -->
+	</div> <!-- end main -->
+
+{% endblock %}

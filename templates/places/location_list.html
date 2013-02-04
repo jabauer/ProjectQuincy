@@ -1,0 +1,24 @@
+<!-- Template for listing all Locations in the system. -->
+
+{% extends "eafsd_browse.html" %}
+{% load url from future %}
+
+{% block title %}Locations | {{ block.super }}{% endblock %}
+
+{% block main %}
+	<div id="main">
+		<div id="content">
+		{% block content %}
+			<h3 class="browse_title">Locations ({{ locations|length }} total)</h3>
+				<ul>
+					{% for location in locations %}
+					<li><a href="{% url 'location_detail' location.id%}">{{ location }}</a></li>
+					{% endfor %}
+				</ul>
+		{% endblock %}
+		</div> <!-- end content -->
+		<div id="sidebar">
+		{% block sidebar%}{{ block.super }}{% endblock%}
+		</div> <!-- end sidebar -->
+	</div> <!-- end main -->
+{% endblock %}

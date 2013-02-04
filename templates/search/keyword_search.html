@@ -1,0 +1,58 @@
+{% extends 'eafsd_browse.html' %}
+{% load url from future %}
+
+{% block title %}Keyword Search | {{block.super}}{% endblock %}
+
+{% block main%}
+	<div id="main">
+		<div id="content">
+		{% block content %}
+			<h3>Keyword Search</h3>
+				<table class="search">
+					<tr>
+						<form action="{% url 'individual_keyword_search' %}" method="get">
+							<td>
+								<span class="search_param">Individuals (by name) </span>
+							</td>
+							<td>
+								<input type="text" name="q">
+							</td>
+							<td>
+								<input type="submit" value="Search">
+							</td>
+						</form>
+					</tr>
+					<tr>
+						<form action="{% url 'location_keyword_search' %}" method="get">
+							<td>
+								<span class="search_param">Locations (by name) </span>
+							</td>
+							<td>
+								<input type="text" name="q">
+							</td>
+							<td>
+								<input type="submit" value="Search">
+							</td>
+						</form>
+					</tr>
+					<tr>
+						<form action="{% url 'assignment_title_keyword_search' %}" method="get">
+							<td>
+								<span class="search_param">Assignment Titles (by name) </span>
+							</td>
+							<td>
+								<input type="text" name="q">
+							</td>
+							<td>
+								<input type="submit" value="Search">
+							</td>
+						</form>
+					</tr>
+				</table>
+		{% endblock %}
+		</div> <!-- end content -->
+		<div id="sidebar">
+		{% block sidebar%}{{ block.super }}{% endblock%}
+		</div> <!-- end sidebar -->
+	</div> <!-- end main -->
+{% endblock %}

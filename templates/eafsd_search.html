@@ -1,0 +1,12 @@
+<!-- This template gives a brief overview of searching possibilities in the EAFSD.  It extends the base template eafsd_base.html -->
+
+{% extends "eafsd_base.html"%}
+
+{% block main %}
+	{%block content%}{% endblock %}
+	{% block sidebar %}
+		<h3>But I'm looking for ____ !</h3>
+		<p>If a keyword search doesn't meet your needs, take a look at the <b>Explore</b> in the navigation bar.  From there you can browse the database using lists or through a series of visualizations based on (and linking to) live data.</p>
+		<p>If you have any thoughts on how to best to search the database, <a href="mailto:jabauer@virginia.edu">let me know</a>.  I welcome all suggestions: everything from "I need to find all of John Quincy Adams' clerks" to "You should use solr because..."</p>
+	{% endblock %}
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends 'eafsd_browse.html' %}
+{% load url from future %}
+
+{% block title %}Location Circle Pack | {{ block.super }}{% endblock %}
+{% block scripts%}
+  <style>
+    circle {
+      fill: #736346;
+      fill-opacity: .4;
+      stroke: #736346;
+      stroke-width: 1px;
+    }
+
+    .leaf circle {
+      fill: #465B73;
+      fill-opacity: 1;
+    }
+
+    text {
+      fill: #ccc;
+      font: 10px sans-serif;
+    }
+  </style>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+{% endblock %}
+
+{% block main%}
+<div id="main">
+    <div id="content">
+    {% block content %}
+      <h1 class="vis">Where were people sent?</h1>
+      <p>Mouseover a circle to see the full place name.<br>
+      Click on any circle for more information.</p>
+      <script>
+
+      var diameter = 800,
+          format = d3.format(",d");
+
+      var pack = d3.layout.pack()
+          .size([diameter - 4, diameter - 4])
+          .value(function(d) { return d.size; })
+          .padding("1");
+
+      var svg = d3.select("div#content").append("svg")
+          .attr("width", diameter)
+          .attr("height", diameter)
+        .append("g")
+          .attr("transform", "translate(2,2)");
+
+      d3.json("../location_tree.json", function(error, root) {
+        var node = svg.datum(root).selectAll(".node")
+            .data(pack.nodes)
+          .enter().append("g")
+            .attr("class", function(d) { return d.children ? "node" : "leaf node"; })
+            .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+            .append("a")
+              .attr("xlink:href", function(d) {return "../"+ d.level +"/" + d.id; });
+
+        node.append("title")
+            .text(function(d) { return d.name + (d.children ? "" : ": " + format(d.size)); });
+
+        node.append("circle")
+            .attr("r", function(d) { return d.r; });
+
+        node.filter(function(d) { return !d.children; }).append("text")
+            .attr("dy", ".3em")
+            .style("text-anchor", "middle")
+            .text(function(d) { return d.name.substring(0, d.r / 3); });
+      });
+
+      d3.select(self.frameElement).style("height", diameter + "px");
+
+      </script>
+    {% endblock %}
+    </div> <!-- end content -->
+    <div id="sidebar">
+    {% block sidebar%}
+    <h3>Locations in the Foreign Service</h3>
+      <p>This visualization uses a <a target="_blank" href="http://en.wikipedia.org/wiki/Circle_packing_theorem">circle packing algorithm</a> to show where early American foreign service officers were assigned.</p>
+      <p>The outer, brown circles represent, in descending order of size:</p>
+      <p><span class="brown"><b>All Locations</b></span></p>
+      <p><span class="brown"><b>The 5 Inhabited Continents</b></span></p>
+      <p><span class="brown"><b>The States on Each Continent</b></span></p>
+      <p><span class="blue"><b>The blue circles are Locations</b></span></p>
+      <p>The radius of each blue circle is determined by how many officers were assigned to that location.  The brown circles are sized to accomidate the locations they contain.</p>
+      <p>To learn more about how the EAFSD records geographic information and assignments, look at the <a href="../explore#schema">database diagrams</a>.</p>
+    {% endblock%}
+    </div> <!-- end sidebar -->
+  </div> <!-- end main -->
+
+{% endblock %}

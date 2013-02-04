@@ -1,0 +1,23 @@
+<!-- This is the template for displaying information associated with a specific State record.
+	It extends the eafsd_base template. -->
+
+{% extends "eafsd_base.html" %}
+
+{% block title %}{{ state.name }} | {{ block.super }}{% endblock %}
+
+{% block main%}
+{% load url from future %}
+<div id="main">
+	<div id="sidebar">
+		<h3>State</h3>
+		<p><span class="field_name">Name: </span>{{state}}</p>
+		<p><span class="field_name">Notes: </span>{{state.notes|default_if_none:""}}</p>
+		<p><a href="{% url 'state_list' %}">back to all States</a></p>
+	</div> <!-- end sidebar -->
+	<div id="content">
+		<h3 class="browse_title">Related Locations</h3>
+		{% for i_s in in_states %}
+			<p><a href="{% url 'location_detail' i_s.location.id %}">{{i_s.location}}</a></p>
+		{% endfor %}
+	</div> <!-- end content -->
+{% endblock %}

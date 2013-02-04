@@ -1,0 +1,80 @@
+<!-- This is the show screen for a single Location record -->
+
+{% extends "eafsd_base.html" %}
+
+{% block title %}{{ location.name }} | {{ block.super }}{% endblock %}
+
+{% block scripts%}
+		
+		<!-- stylesheet for colorbox jquery plugin -->
+		<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}styles/colorbox-footnote.css">
+
+		<!-- load jquery library from Google Content Network -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+		<script type="text/javascript" src="{{STATIC_URL}}javascript/jquery.colorbox-min.js"></script>
+
+		<script type="text/javascript" src="{{STATIC_URL}}javascript/open-colorbox.js"></script>
+
+{% endblock %}
+
+{% block main %}
+	{% load url from future %} <!-- always leave this in here, otherwise links may break! -->
+	<div id="main">
+		<div id="sidebar">
+			<h3>Location</h3>
+				<p><span class="field_name">Name:</span> {{location.name|default_if_none:""}}</p>
+				<p><span class="field_name">Latitude:</span> {{location.lat|default_if_none:""}}</p>
+				<p><span class="field_name">Longitude: </span> {{location.long|default_if_none:""}}</p>
+				<p><span class="field_name">States</span></p>
+					<ul class="field_data">
+					{% for i_s in in_states %}
+						<li><a href="{% url 'state_detail' i_s.state.id %}">{{i_s.state}}</a></li>
+					{% endfor %}
+					</ul>
+				<p><span class="field_name">Regions</span></p>
+					<ul class="field_data">
+					{% for i_r in in_regions %}
+						<li><a href="{% url 'region_detail' i_r.region.id %}">{{i_r.region}}</a></li>
+					{% endfor %}
+					</ul>
+				<p><span class="field_name">Notes:</span> {{location.notes|default_if_none:""}}</p>
+				<p><a href="/locations/">return to all Places</a></p>
+		</div> <!-- end sidebar -->
+		<div id="content">
+			<h3 class="field_name">Related Assignments</h3>
+				<table class="five_columns">
+					<th class="field_name">Assignment Title</th>
+					<th class="field_name">Individual</th>
+					<th class="field_name">Years</th>
+					<th class="field_name">Citations</th>
+					<th class="field_name">Notes</th>
+					{% for assignment in location.assignment_set.all %}
+						<tr>
+							<td><a href="{% url 'assignment_title_detail' assignment.assignment_title.id %}">{{assignment.assignment_title}}</a></td>
+							<td><a href="{% url 'individual_detail' assignment.individual.id %}">{{assignment.individual}}</a></td>
+							<td>{{assignment.start_year}} - {{assignment.end_year}}</td>
+							<td>{% for footnote in footnotes %}
+									{% if footnote.content_type.name == "assignment" and footnote.object_id == assignment.id %}
+										{{footnote.supports|yesno:"Supported by, Contradicted by"}}, <a href="#{{footnote.id}}" class="inline" width="300px"><em>{{footnote.citation}}</em></a></br>
+									{% endif %}
+							{% endfor %}</td>
+							<td>{{assignment.notes|default_if_none:""}}</td>
+						</tr>
+					{% endfor %}
+				</table>
+		</div> <!-- end content -->
+		<div id="post_content">
+			{% for assignment in location.assignment_set.all %}
+				{% for footnote in footnotes %}
+					{% if footnote.content_type.name == "assignment" and footnote.object_id == assignment.id %}
+						<div id="{{footnote.id}}">
+							{% include "footnote_snippet.html" with supports=footnote.supports bibliography_entry=footnote.citation.bibliography.entry  canonic_url=footnote.citation.canonic_url pages=footnote.citation.pages citation_notes=footnote.citation.notes footnote_notes=footnote.notes user_firstname=footnote.auth_user.first_name user_lastname=footnote.auth_user.last_name%}
+						</div>
+					{% endif %}
+				{% endfor %}
+			{% endfor%}
+		</div><!-- end post_content -->
+	</div> <!-- end main -->
+
+{% endblock %}

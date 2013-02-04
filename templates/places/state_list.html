@@ -1,0 +1,24 @@
+<!-- Template for listing all States in the system. -->
+
+{% extends "eafsd_browse.html" %}
+{% load url from future %}
+
+{% block title %}States | {{ block.super }}{% endblock %}
+
+{% block main %}
+	<div id="main">
+		<div id="content">
+		{% block content %}
+			<h3 class="browse_title">States ({{ states|length }} total)</h3>
+				<ul>
+					{% for state in states %}
+					<li><a href="{% url 'state_detail' state.id%}">{{ state }}</a></li>
+					{% endfor %}
+				</ul>
+		{% endblock %}
+		</div> <!-- end content -->
+		<div id="sidebar">
+		{% block sidebar%}{{ block.super }}{% endblock%}
+		</div> <!-- end sidebar -->
+	</div> <!-- end main -->
+{% endblock %}

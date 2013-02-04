@@ -1,0 +1,43 @@
+<!-- This is the base template for the project.  It is extended by every other template.
+	It is specific to The Early American Foreign Service Database installation. -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{% block title %}EAFSD{% endblock %}</title>
+		{%block scripts%}
+		<!-- This block can be used for adding additional javascripts to pages, without having to write a new base template. -->
+		{% endblock%}
+		<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}styles/eafsd.css">
+	</head>
+	<body>
+		<div id="allcontent">
+			<div id="header">
+				<a class="login" href="/admin/"><b>login</b></a>
+				<img src="{{STATIC_URL}}images/SmallCompassRose.gif" class="logo" alt="stylized image of a compass rose" />
+				<img src="{{STATIC_URL}}images/LongTitle.gif" class="text" alt="The Early American Foreign Service Database" />
+				<div id="nav">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/keyword_search/">Search</a></li>
+						<li><a href="/explore/">Explore</a></li>
+						<li><a href="#">Visual Essays</a></li>
+						<li class="last"><a href="/about/">About</a></li>
+					</ul>
+				</div> <!-- end nav -->
+			</div> <!-- end header -->
+			<div id="main-wrapper">
+				{% block main %}
+					<!-- Several other blocks can go in here.
+					This is where the main content of the page is displayed.
+					See the stylesheet for div id options. -->
+				{% endblock %}
+			</div> <!-- end main-wrapper -->
+			<div id="footer">
+					<p><em>The Early American Foreign Service Database</em> is licensed under a 
+					<a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a></p>
+					<p>Designed and Built by <a href="http://www.jeanbauer.com" target="_blank">Jean Bauer</a>  |  Powered by <a href="http://projectquincy.rubyforge.org" target="_blank">Project Quincy</a>  |  Read the <a href="/acknowledgements/">Acknowledgements Page</a></p>
+			</div> <!-- end footer -->
+		</div> <!-- end allcontent -->
+	</body>
+</html>

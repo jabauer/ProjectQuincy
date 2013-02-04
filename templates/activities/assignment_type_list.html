@@ -1,0 +1,24 @@
+<!-- Template for listing all AssignmentTypes in the system. -->
+
+{% extends "eafsd_browse.html" %}
+{% load url from future %}
+
+{% block title %}Assignment Types | {{ block.super }}{% endblock %}
+
+{% block main %}
+	<div id="main">
+		<div id="content">
+		{% block content %}
+			<h3 class="browse_title">Assignment Types ({{ assignment_types|length }} total)</h3>
+				<ul>
+					{% for assignment_type in assignment_types %}
+					<li><a href="{% url 'assignment_type_detail' assignment_type.id%}">{{ assignment_type }}</a></li>
+					{% endfor %}
+				</ul>
+		{% endblock %}
+		</div> <!-- end content -->
+		<div id="sidebar">
+		{% block sidebar%}{{ block.super }}{% endblock%}
+		</div> <!-- end sidebar -->
+	</div> <!-- end main -->
+{% endblock %}

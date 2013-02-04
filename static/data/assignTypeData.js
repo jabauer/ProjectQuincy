@@ -1,0 +1,53 @@
+var Assignments = {
+	"diplomatic": {
+		"Charge d'Affaires":12,
+		"Charge d’Affaires a.i.":4,
+		"Commissioner":1,
+		"Commissioner (not COM)":3,
+		"Commissioner Plenipotentiary":1,
+		"Delegate U.S. Br. Commission":1,
+		"Diplomatic Agent":1,
+		"Envoy Extraordinaire and Minister Plenipotentiary":12,
+		"Minister Plenipotentiary":28,
+		"Minister Resident":6,
+		"Special Agent to Portuguese Government":1,
+		"Special Agent/Commissioner":1,
+		"Special Commissioner":1,
+		"Special Diplomatic Agent":64,
+		"Special Negotiator":33,
+		"Treaty Negotiator":24
+	},
+	"support staff": {
+		"Chancellor of Consulate":2,
+		"Clerk to Consul General":1,
+		"Secretary of Delegation":1,
+		"Secretary of Legation":27,
+		"Secretary of Negotiating Delegation":1,
+		"Secretary to Consul General":4,
+		"Secretary to Negotiating Commission":1,
+		"Secretary to Negotiating Delegation":1,
+		"Secretary - Special Diplomatic Mission":1
+	},
+	"consular": {
+		"Acting Commercial Agent":6,
+		"Acting Consul":34,
+		"Acting Consul General":7,
+		"Acting Consular Agent":3,
+		"Acting Vice Consul":4,
+		"Acting Vice Consul in Charge":1,
+		"Agent for Claims and Seamen":1,
+		"Agent for Commerce and Seamen":33,
+		"Agent for Prisoners of War":1,
+		"Commercial Agent":28,
+		"Consul":329,
+		"Consul General":11,
+		"Consul/ Claims Commissioner":1,
+		"Consular Agent":36,
+		"Consular and Commercial Agent":12,
+		"Special Agent for Claims":1,
+		"Vice /Acting Consul":2,
+		"Vice Commercial Agent":3,
+		"Vice Consul":24,
+		"Vice Consul in Charge":2
+	}
+}

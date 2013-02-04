@@ -1,0 +1,22 @@
+<div id="footnote">
+	{% if supports %}
+		<h3>Supported By:</h3> 
+	{% else %}
+		<h3>Contradicted By:</h3>
+	{% endif %}
+		<p>{{bibliography_entry}}
+			{% if canonic_url != nil%}
+				, {{canonic_url}}
+			{% endif %}
+			{% if pages != nil%}
+				, {{pages}}
+			{% endif %}
+		</p>
+		{% if footnote_notes != nil %}
+			<p><span class="field_name">Reason for Decision:</span>{{footnote_notes}}<p>
+		{% endif %}
+		{% if citation_notes != nil %}
+			<p><span class="field_name">Notes on Source:</span>{{citation_notes}}<p>
+		{% endif %}
+		<p><span class="field_name">Entered By:</span>{{user_firstname}} {{user_lastname}}</p>
+</div>

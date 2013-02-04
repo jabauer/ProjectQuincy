@@ -1,0 +1,23 @@
+<!-- This is the template for displaying information associated with a specific Continent record.
+	It extends the eafsd_base template. -->
+
+{% extends "eafsd_base.html" %}
+
+{% block title %}{{ continent.name }} | {{ block.super }}{% endblock %}
+
+{% block main%}
+{% load url from future %}
+<div id="main">
+	<div id="sidebar">
+		<h3>Continent</h3>
+		<p><span class="field_name">Name: </span>{{continent}}</p>
+		<p><span class="field_name">Notes: </span>{{continent.notes}}</p>
+		<p><a href="{% url 'continent_list' %}">all continents</a></p>
+	</div> <!-- end sidebar -->
+	<div id="content">
+		<h3 class="browse_title">Related States</h3>
+		{% for state in states %}
+			<p><a href="{% url 'state_detail' state.id %}">{{state}}</a></p>
+		{% endfor %}
+	</div> <!-- end content -->
+{% endblock %}

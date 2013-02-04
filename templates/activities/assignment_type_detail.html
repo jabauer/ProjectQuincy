@@ -1,0 +1,23 @@
+<!-- This is the template for displaying information associated with a specific Assignment Type record.
+	It extends the eafsd_base template. -->
+
+{% extends "eafsd_base.html" %}
+
+{% block title %}{{ assignment_type.name }} | {{ block.super }}{% endblock %}
+
+{% block main%}
+{% load url from future %}
+<div id="main">
+	<div id="sidebar">
+		<h3>Assignment Type</h3>
+		<p><span class="field_name">Name: </span>{{assignment_type}}</p>
+		<p><span class="field_name">Notes: </span>{{assignment_type.notes}}</p>
+		<p><a href="{% url 'assignment_type_list' %}">all assignment types</a></p>
+	</div> <!-- end sidebar -->
+	<div id="content">
+		<h3 class="browse_title">Related Assignment Titles</h3>
+		{% for assignment_title in assignment_titles %}
+			<p><a href="{% url 'assignment_title_detail' assignment_title.id %}">{{assignment_title}}</a></p>
+		{% endfor %}
+	</div> <!-- end content -->
+{% endblock %}

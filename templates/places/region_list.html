@@ -1,0 +1,24 @@
+<!-- Template for listing all Regions in the system. -->
+
+{% extends "eafsd_browse.html" %}
+{% load url from future %}
+
+{% block title %}Regions | {{ block.super }}{% endblock %}
+
+{% block main %}
+	<div id="main">
+		<div id="content">
+		{% block content %}
+			<h3 class="browse_title">Regions ({{ regions|length }} total)</h3>
+				<ul>
+					{% for region in regions %}
+					<li><a href="{% url 'region_detail' region.id%}">{{ region }}</a></li>
+					{% endfor %}
+				</ul>
+		{% endblock %}
+		</div> <!-- end content -->
+		<div id="sidebar">
+		{% block sidebar%}{{ block.super }}{% endblock%}
+		</div> <!-- end sidebar -->
+	</div> <!-- end main -->
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "eafsd_search.html"%}
+{% load url from future %}
+
+{% block title %}Search Locations | {{block.super}}{% endblock %}
+
+{% block main%}
+	<div id="main">
+		<div id="content">
+		{% block content %}
+			<h3 class="browse_title">Locations Keyword Search</h3>
+				<form action="" method="get">
+					<p>
+						<span class="search_param">Original Search: </span>
+						<input type="text" name="q" value="{{ query_string }}">
+						<input type="submit" value="Search">
+						<a href="{% url 'keyword_search' %}">back</a>
+					</p>
+				</form>
+			<h3><b>Results ({{ locations|length }} total)</b></h3>
+				<ul>
+					{% for location in locations %}
+					<li><a href="{% url 'location_detail' location.id %}">{{ location }}</a></li>
+					{% endfor %}
+				</ul>
+		{% endblock %}
+		</div> <!-- end content -->
+		<div id="sidebar">
+		{% block sidebar%}{{ block.super }}{% endblock%}
+		</div> <!-- end sidebar -->
+	</div> <!-- end main -->
+{% endblock %}

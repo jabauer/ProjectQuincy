@@ -1,0 +1,92 @@
+{% extends 'eafsd_base.html' %}
+{% load url from future %}
+
+{% block title %}Assignment Bubble Pack | {{ block.super }}{% endblock %}
+{% block scripts%}
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+{% endblock %}
+
+{% block main%}
+<div id="main">
+    <div id="content">
+    {% block content %}
+    <h1 class="vis">Which were the most popular titles?</h1>
+    <p>Mouseover any circle to see the full assignment title and how many officers were given that title.</br>
+    Click on the underlined title inside any circle to learn more.</p>
+      <script>
+
+      var diameter = 800,
+          format = d3.format(",d"),
+          color = d3.scale.ordinal()
+            .domain(["diplomatic", "consular", "support staff"])
+            .range([d3.rgb("#465B73"), d3.rgb("#736346"), d3.rgb("#5B806B")]);
+
+      var bubble = d3.layout.pack()
+          .sort(null)
+          .size([diameter, diameter])
+          .padding(1.5);
+
+      var svg = d3.select("div#content").append("svg")
+          .attr("width", diameter)
+          .attr("height", diameter)
+          .attr("class", "bubble");
+
+      d3.json("../assignment_by_type.json", function(error, root) {
+        var node = svg.selectAll(".node")
+            .data(bubble.nodes(classes(root))
+            .filter(function(d) { return !d.children; }))
+          .enter().append("g")
+            .attr("class", "node")
+            .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+        node.append("title")
+            .text(function(d) { return d.className + ": " + format(d.value); });
+
+        node.append("circle")
+            .attr("r", function(d) { return d.r; })
+            .style("fill", function(d) { return color(d.packageName); });
+
+        node.append("text")
+         .attr("dy", ".3em")
+            .style("text-anchor", "middle")
+            .append("a")
+              .attr("fill", "#FFF4D4")
+              .attr("text-decoration", "underline")
+              .attr("xlink:href", function(d) {return "../assignment_titles/" + d.id; })
+              .text(function(d) { return d.className.substring(0, d.r / 3.5); });
+      });
+
+      // Returns a flattened hierarchy containing all leaf nodes under the root.
+      function classes(root) {
+        var classes = [];
+
+        function recurse(name, node) {
+          if (node.children) node.children.forEach(function(child) { recurse(node.name, child); });
+          else classes.push({packageName: name, className: node.name, value: node.size, id: node.id});
+        }
+
+        recurse(null, root);
+        return {children: classes};
+      }
+
+      d3.select(self.frameElement).style("height", diameter + "px");
+
+      </script>
+    {% endblock %}
+    </div> <!-- end content -->
+    <div id="sidebar">
+    {% block sidebar%}
+    <h3>Assignment Titles in the Foreign Service</h3>
+    <p>Each circle represents a title used in the early American foreign service between 1775 and 1825.</p>
+    <p>The circles are color coded by the type of assignment.</p>
+    <p><span class="brown"><b>Consular titles are in brown.</b></span></p>
+    <p><span class="blue"><b>Diplomatic titles are in blue.</b></span></p>
+    <p><span class="green"><b>Support staff titles are in green.</b></span></p>
+    <p>The radius of each circle is determined by how many officers were assigned that title.</p>
+    <p>Or you can see all the Assignment Titles in an <a href="/assignment_titles/" title="List of all assignment titles in the database">alphabetical list</a>.</p>
+    <p>To learn more about how the EAFSD records assignments, look at the <a href="../explore#schema">database diagrams</a>.</p>
+    {% endblock%}
+    </div> <!-- end sidebar -->
+  </div> <!-- end main -->
+
+{% endblock %}

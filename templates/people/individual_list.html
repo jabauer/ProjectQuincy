@@ -1,0 +1,24 @@
+<!-- Template for listing all Indviduals in the system. -->
+
+{% extends "eafsd_browse.html" %}
+{% load url from future%}
+
+{% block title %}Individuals | {{ block.super }}{% endblock %}
+
+{% block main %}
+	<div id="main">
+		<div id="content">
+		{% block content %}
+			<h3 class="browse_title">Individuals ({{ individuals|length }} total)</h3>
+				<ul>
+					{% for individual in individuals %}
+					<li><a href="{% url 'individual_detail' individual.id %}">{{ individual }}</a></li>
+					{% endfor %}
+				</ul>
+		{% endblock %}
+		</div> <!-- end content -->
+		<div id="sidebar">
+		{% block sidebar%}{{ block.super }}{% endblock%}
+		</div> <!-- end sidebar -->
+	</div> <!-- end main -->
+{% endblock %}

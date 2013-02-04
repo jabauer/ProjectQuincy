@@ -1,0 +1,29 @@
+<!--This template contains the text and images for the site's About page. -->
+
+{% extends "eafsd_base.html" %}
+
+
+{% block title %}About | {{ block.super }}{% endblock %}
+
+{% block main %}
+	<div id="content">
+		<div id="image" style="width:175px">
+			<img src="{{STATIC_URL}}images/John_Quincy_Adams_1824.png", alt="Photograph of John Quincy Adams">
+			<p>Copy of a lost daguerreotype of John</br>Quincy Adams by Philip Haas, 1843.</p>
+		</div> <!-- end image -->
+
+		<h3><cite>The Early American Foreign Service Database</cite></h3>
+		<p>The EAFSD places biographical and professional information about all foreign service officers in a relational data structure. This data structure allows users to trace the early American governments' attempts to deploy and control their overseas representatives.</p> 
+		<p>The database also recreates the correspondence networks that sprang up between the officers as they sought from each other the information and expertise necessary to fulfill their duties.</p>
+		<p>The EAFSD is far from complete, but I will be entering new data whenever possible.  I plan to set up a system whereby users can add their own content to the database.  If you have data about the Early American Foreign Service that you would like to make available in an open-source, open-access environment, please <a mailto:"jean_bauer@brown.edu">contact me</a>.</p>
+		<p>Please read the the <a href="/acknowledgements/">Acknowledgements Page</a> to see how many people and institutions have made this site a reality.</p>
+	</div> <!-- end content -->
+
+	<div id='sidebar'>
+		<h3>What is Project Quincy?</h3>
+		<p>Project Quincy is a <a target="_blank" href="http://djangoproject.org">Django</a> application with a <a href="http://mysql.org">MySQL</a> database that uses information about people, places, and organizations to trace how social networks and institutions develop over time and through space.</p> 
+		<p>It is named in honor of John Quincy Adams (pictured on the right whilst gravely observing a camera).</p>
+		<p>Project Quincy is growing out of my work on the EAFSD, but the code has such a wide range of applications, that it I expect it will soon take on a life of its own.</p>
+		<p><a href="http://projectquincy.rubyforge.org">http://projectquincy.rubyforge.org</a></p>
+	</div><!-- end sidebar -->
+{% endblock %}

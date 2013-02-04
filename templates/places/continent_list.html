@@ -1,0 +1,24 @@
+<!-- Template for listing all Continents in the system. -->
+
+{% extends "eafsd_browse.html" %}
+{% load url from future %}
+
+{% block title %}Continents | {{ block.super }}{% endblock %}
+
+{% block main %}
+	<div id="main">
+		<div id="content">
+		{% block content %}
+			<h3 class="browse_title">Continents ({{ continents|length }} total)</h3>
+				<ul>
+					{% for continent in continents %}
+					<li><a href="{% url 'continent_detail' continent.id%}">{{ continent }}</a></li>
+					{% endfor %}
+				</ul>
+		{% endblock %}
+		</div> <!-- end content -->
+		<div id="sidebar">
+		{% block sidebar%}{{ block.super }}{% endblock%}
+		</div> <!-- end sidebar -->
+	</div> <!-- end main -->
+{% endblock %}

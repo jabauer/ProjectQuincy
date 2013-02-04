@@ -1,0 +1,75 @@
+<!-- This is the template for displaying information associated with a specific Assignment Title record.
+	It extends the eafsd_base template. -->
+
+{% extends "eafsd_base.html" %}
+
+{% block title %}{{ assignment_title.name }} | {{ block.super }}{% endblock %}
+
+{% block scripts%}
+		
+		<!-- stylesheet for colorbox jquery plugin with customizations for displaying footnotes-->
+		<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}styles/colorbox-footnote.css">
+
+		<!-- load jquery library from Google Content Network -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+		<script type="text/javascript" src="{{STATIC_URL}}javascript/jquery.colorbox-min.js"></script>
+
+		<script type="text/javascript" src="{{STATIC_URL}}javascript/open-colorbox.js"></script>
+
+{% endblock %}
+
+{% block main%}
+{% load url from future %}
+<div id="main">
+	<div id="sidebar">
+		<h3>Assignment Title</h3>
+		<p><span class="field_name">Name:</span> {{assignment_title|default_if_none:""}}</p>
+		<p><span class="field_name">Type:</span> 
+			{% if assignment_title.assignment_type != None %}
+			<a href="{% url 'assignment_type_detail' assignment_title.assignment_type.id %}">{{assignment_title.assignment_type}}</a>
+			{% endif %}
+		</p>
+		<p><span class="field_name">Commissioned:</span> {{assignment_title.commissioned|default_if_none:""}}</p>
+		<p><span class="field_name">Temporary:</span> {{assignment_title.temporary|default_if_none:""}}</p>
+		<p><span class="field_name">Notes:</span> {{assignment_title.notes|default_if_none:""}}</p>
+		<p><a href="/assignment_titles/">browse</a></p>
+	</div><!-- end sidebar -->
+	<div id="content">
+			<h3 class="field_name">Related Assignments</h3>
+				<table class="five_columns">
+					<th class="field_name">Person</th>
+					<th class="field_name">Location</th>
+					<th class="field_name">Years</th>
+					<th class="field_name">Citations</th>
+					<th class="field_name">Notes</th>
+					{% for assignment in assignment_title.assignment_set.all %}
+						<tr>
+							<td><a href="{% url 'individual_detail' assignment.individual.id %}">{{assignment.individual}}</a></td>
+							<td><a href="{% url 'location_detail' assignment.location.id %}">{{assignment.location}}</a></td>
+							<td>{{assignment.start_year}} - {{assignment.end_year}}</td>
+							<td>{% for footnote in footnotes %}
+									{% if footnote.content_type.name == "assignment" and footnote.object_id == assignment.id %}
+										{{footnote.supports|yesno:"Supported by, Contradicted by"}}, <a href="#{{footnote.id}}" class="inline" width="300px"><em>{{footnote.citation}}</em></a></br>
+									{% endif %}
+								{% endfor %}
+							</td>
+							<td>{{assignment.notes|default_if_none:""}}</td>
+						</tr>
+					{% endfor %}
+				</table>
+	</div><!-- end content -->
+		<div id="post_content">
+			{% for assignment in assignment_title.assignment_set.all %}
+				{% for footnote in footnotes %}
+					{% if footnote.content_type.name == "assignment" and footnote.object_id == assignment.id %}
+						<div id="{{footnote.id}}">
+							{% include "footnote_snippet.html" with supports=footnote.supports bibliography_entry=footnote.citation.bibliography.entry  canonic_url=footnote.citation.canonic_url pages=footnote.citation.pages citation_notes=footnote.citation.notes footnote_notes=footnote.notes user_firstname=footnote.auth_user.first_name user_lastname=footnote.auth_user.last_name%}
+						</div>
+					{% endif %}
+				{% endfor %}
+			{% endfor%}
+		</div><!-- end post_content -->
+	</div> <!-- end main -->
+</div> <!-- end main -->
+{% endblock %}

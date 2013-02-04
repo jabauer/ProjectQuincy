@@ -1,0 +1,21 @@
+<!-- This template displays a list of links to the LIST views of all the major tables in the database
+	in the sidebar.  It extends the base template eafsd_base.html -->
+
+{% extends "eafsd_base.html"%}
+
+{% block main %}
+	{%block content%}{% endblock %}
+	{% block sidebar %}
+		<p>Just want a list?  Then click on the links below to see what is in the major tables.</p>
+		<p>Items (should be) listed in alphabetical order.</p>
+		<h3>Browse by:</h3>
+		<p class="browse">{% if not individuals %}<a href="/individuals/">Individuals</a> {% else %}<b>Individuals</b>{% endif %}</p>
+		<p class="browse">{% if not locations %}<a href="/locations/">Locations</a> {% else %}<b>Locations</b>{% endif %}</p>
+		<p class="browse">{% if not letters %}<a href="/letters/">Letters</a> {% else %}<b>Letters</b>{% endif %}</p>
+		<p class="browse">{% if not assignment_titles %}<a href="/assignment_titles/">Assignment Titles</a> {% else %}<b>Assignment Titles</b>{% endif %}</p>
+		<p class="browse">{% if not assignment_types %}<a href="/assignment_types/">Assignment Types</a> {% else %}<b>Assignment Types</b>{% endif %}</p>
+		<p class="browse">{% if not states %}<a href="/states/">States</a> {% else %}<b>States</b>{% endif %}</p>
+		<p class="browse">{% if not regions %}<a href="/regions/">Regions</a> {% else %}<b>Regions</b>{% endif %}</p>
+		<p class="browse">{% if not continents %}<a href="/continents/">Continents</a> {% else %}<b>Continents</b>{% endif %}</p>
+	{% endblock %}
+{% endblock %}

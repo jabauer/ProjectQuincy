@@ -1,0 +1,31 @@
+{% extends "eafsd_search.html"%}
+{% load url from future %}
+
+{% block title %}Search Assignment Titles | {{block.super}}{% endblock %}
+
+{% block main%}
+	<div id="main">
+		<div id="content">
+		{% block content %}
+			<h3 class="browse_title">Assignment Titles Keyword Search</h3>
+				<form action="" method="get">
+					<p>
+						<span class="search_param">Original Search: </span>
+						<input type="text" name="q" value="{{ query_string }}">
+						<input type="submit" value="Search">
+						<a href="{% url 'keyword_search' %}">back</a>
+					</p>
+				</form>
+			<h3><b>Results ({{ assignment_titles|length }} total)</b></h3>
+				<ul>
+					{% for assignment_title in assignment_titles %}
+					<li><a href="{% url 'assignment_title_detail' assignment_title.id %}">{{ assignment_title }}</a></li>
+					{% endfor %}
+				</ul>
+		{% endblock %}
+		</div> <!-- end content -->
+		<div id="sidebar">
+		{% block sidebar%}{{ block.super }}{% endblock%}
+		</div> <!-- end sidebar -->
+	</div> <!-- end main -->
+{% endblock %}
