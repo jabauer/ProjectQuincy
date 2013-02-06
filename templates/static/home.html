@@ -6,22 +6,27 @@
 {% block title %}{{ block.super }}{% endblock %}
 
 {% block main %}
-	<div id="all_text">
-		<img class="main_page" src="{{STATIC_URL}}images/Treaty_of_Paris_by_Benjamin_West_1783.jpg">
-		<h1><em>American Diplomacy, 1775 - 1825</em></h1>
-		<h4 class="purple">Aliquam lectus orci, adipiscing et, sodales ac, feugiat non, lacus. Ut dictum velit nec est.</h4> 
+	<div id="all_text" style="height:400px">
+		<div id="home-image" style="width:500px">
+			<img src="{{STATIC_URL}}images/Treaty_of_Paris_by_Benjamin_West_1783.jpg">
+			<p class="caption">Benjamin West's "American Commissioners of the Preliminary Peace with Great Britain."  The left hand side of the canvas is blank because the British commissioners refused to appear in the canvas.</p>
+		</div>
+		<h1 style="margin-top:0px"><em>American Diplomacy, 1775 &ndash; 1825</em></h1>
+		<h4>The Early American Foreign Service Database (EAFSD to its friends) traces the U.S. Foreign Service from its early attempts at supplying the Continental Army during the American Revolution through the establishment of U.S. embassies in South America.</p>
 
-		<h4>Quisque posuere, purus sit amet malesuada blandit, sapien sapien auctor arcu, sed pulvinar felis mi sollicitudin tortor. </h4>
+		<h4>The EAFSD is both a public resource and my dissertation, which will be submitted to the <a target="_blank" href="http://www.virginia.edu/history/">Corcoran Department of History at the University of Virginia</a> in the Summer of 2103.</h4>
 
-		<h4>Maecenas volutpat, nisl et dignissim pharetra, urna lectus ultrices est, vel pretium pede turpis id velit. Aliquam sagittis magna in felis egestas rutrum. </h4>
+		<h4>If this is your first visit, I suggest moving your mouse over the 5 gentlemen pictured on your left to see what happens...</h4>
 
-		<h4>Proin wisi libero, vestibulum eget, pulvinar nec, suscipit ut, mi. </h4>
+		<h4> <a href="/keyword_search/">SEARCH</a> allows to find a particular person, place, or title in the database</h4>
 
-		<h4>Integer in arcu ultricies leo dapibus ultricies. Sed rhoncus lobortis dolor. </h4>
+		<h4><a href="/explore/">EXPLORE</a> gives you an expanding choice of interactive visualizations, designed to get you right into the heart of the database.</h4>
 
-		<h4>Suspendisse dolor. Mauris sapien velit, pulvinar non, rutrum non, consectetuer eget, metus. Morbi tincidunt lorem at urna. Etiam porta. Ut mauris. </h4>
+		<h4><a href="#">VISUAL ESSAYS</a> gives you the chapters of my dissertation</h4>
 
-		<h4>Phasellus tristique rhoncus magna. Nam tincidunt consequat urna. Sed tempor.</h4>
+		<h4><span class="brown">What's New:</span></h4>
+
+		<h4 style="margin-top:-20px">The EAFSD will be changing rapidly between now and July 2013.<br/>Come back often to see what's new!</h4>
 	</div>
 
 {% endblock %}
