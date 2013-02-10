@@ -8,7 +8,14 @@
 {% block main %}
 	<div id="all_text" style="height:400px">
 		<div id="home-image" style="width:500px">
-			<img src="{{STATIC_URL}}images/Treaty_of_Paris_by_Benjamin_West_1783.jpg">
+			<img src="{{STATIC_URL}}images/Treaty_of_Paris_by_Benjamin_West_1783.jpg" width="500" height="375" usemap="#pariswest">
+			<map name="pariswest">
+				<area shape="rect" coords="20,47,70,97" href="individuals/7" title="John Jay, click to learn more"    />
+				<area shape="rect" coords="72,119,122,169" href="individuals/1" title="John Adams, click to learn more"    />
+				<area shape="rect" coords="154,116,204,166" href="individuals/3" title="Benjamin Franklin, click to learn more"    />
+				<area shape="rect" coords="194,58,244,108" href="individuals/261" title="Henry Laurens, click to learn more"    />
+				<area shape="rect" coords="264,126,314,176" href="individuals/631" title="William Temple Franklin, click to learn more"    />
+			</map>
 			<p class="caption">Benjamin West's "American Commissioners of the Preliminary Peace with Great Britain."  The left hand side of the canvas is blank because the British commissioners refused to appear in the canvas.</p>
 		</div>
 		<h1 style="margin-top:0px"><em>American Diplomacy, 1775 &ndash; 1825</em></h1>
@@ -22,7 +29,7 @@
 
 		<h4><a href="/explore/">EXPLORE</a> gives you an expanding choice of interactive visualizations, designed to get you right into the heart of the database.</h4>
 
-		<h4><a href="#">VISUAL ESSAYS</a> gives you the chapters of my dissertation</h4>
+		<h4><a href="/visual_essays/">VISUAL ESSAYS</a> gives you the chapters of my dissertation</h4>
 
 		<h4><span class="brown">What's New:</span></h4>
 

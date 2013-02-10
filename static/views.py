@@ -14,3 +14,6 @@ def explore(request):
 
 def home(request):
 	return render(request, 'static/home.html')
+
+def visual_essays(request):
+	return render(request, 'static/visual_essays.html')
