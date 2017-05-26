@@ -69,7 +69,7 @@ cd /home/vagrant/Quincy2
 
 ## create database
 
-mysql -uroot -pvagrant eafsd < /home/vagrant/vagrant-provision/eafsd_serverdump2014-12-05.sql
+mysql -uroot -pvagrant eafsd < /home/vagrant/vagrant-provision/2017-05-26_eafsd_dump.sql
 
 echo "---"
 echo "---"
