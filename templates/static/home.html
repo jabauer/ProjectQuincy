@@ -1,14 +1,14 @@
 <!--This template contains the text and images for the site's Home page. -->
 
 {% extends "eafsd_base.html" %}
-
+{% load static %}
 
 {% block title %}{{ block.super }}{% endblock %}
 
 {% block main %}
 	<div id="all_text" style="height:400px">
 		<div id="home-image" style="width:500px">
-			<img src="{{STATIC_URL}}images/Treaty_of_Paris_by_Benjamin_West_1783.jpg" width="500" height="375" usemap="#pariswest">
+			<img src="{% static 'images/Treaty_of_Paris_by_Benjamin_West_1783.jpg' %}" width="500" height="375" usemap="#pariswest">
 			<map name="pariswest">
 				<area shape="rect" coords="20,47,70,97" href="individuals/7" title="John Jay, click to learn more"    />
 				<area shape="rect" coords="72,119,122,169" href="individuals/1" title="John Adams, click to learn more"    />

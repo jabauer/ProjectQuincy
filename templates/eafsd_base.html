@@ -1,6 +1,8 @@
 <!-- This is the base template for the project.  It is extended by every other template.
 	It is specific to The Early American Foreign Service Database installation. -->
 
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -8,15 +10,15 @@
 		{%block scripts%}
 		<!-- This block can be used for adding additional javascripts to pages, without having to write a new base template. -->
 		{% endblock%}
-		<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}styles/eafsd.css">
-		<link rel="shortcut icon" href="{{STATIC_URL}}images/CompassRose.ico" >
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/eafsd.css' %}">
+		<link rel="shortcut icon" href="{% static 'images/CompassRose.ico' %}" >
 	</head>
 	<body>
 		<div id="allcontent">
 			<div id="header">
 				<a class="login" href="/admin/"><b>login</b></a>
-				<img src="{{STATIC_URL}}images/SmallCompassRose.gif" class="logo" alt="stylized image of a compass rose" />
-				<img src="{{STATIC_URL}}images/LongTitle.gif" class="text" alt="The Early American Foreign Service Database" />
+				<img src="{% static 'images/SmallCompassRose.gif' %}" class="logo" alt="stylized image of a compass rose" />
+				<img src="{% static 'images/LongTitle.gif' %}" class="text" alt="The Early American Foreign Service Database" />
 				<div id="nav">
 					<ul>
 						<li><a href="/">Home</a></li>

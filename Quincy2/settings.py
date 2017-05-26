@@ -3,6 +3,11 @@
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+import os
+
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
@@ -63,12 +68,12 @@ STATIC_ROOT = ''
 STATIC_URL = '/static/'
 
 # Additional locations of static files
-STATICFILES_DIRS = (
+STATICFILES_DIRS = [
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/home/vagrant/ProjectQuincy/Quincy2/static/',
-)
+    '/home/vagrant/Quincy2/static',
+]
 
 # List of finder classes that know how to find static files in
 # various locations.
@@ -103,12 +108,27 @@ ROOT_URLCONF = 'Quincy2.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'Quincy2.wsgi.application'
 
-TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    "templates"
-)
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'APP_DIRS': True,
+        'DIRS' : [
+            os.path.join(BASE_DIR, "templates")
+        ],
+        'OPTIONS': {
+            'context_processors': [
+                "django.contrib.auth.context_processors.auth",
+            ],
+        }
+    }
+]
+
+# TEMPLATE_DIRS = (
+#     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+#     # Always use forward slashes, even on Windows.
+#     # Don't forget to use absolute paths, not relative paths.
+#     "templates"
+# )
 
 INSTALLED_APPS = (
     'django.contrib.auth',

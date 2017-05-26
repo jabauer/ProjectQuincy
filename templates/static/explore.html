@@ -1,18 +1,20 @@
 <!--This template contains the text and images for the site's Explore page. -->
 
 {% extends 'eafsd_browse.html' %}
+{% load static %}
+
 {% load url from future %}
 
 {% block title %}Explore | {{ block.super }}{% endblock %}
 {% block scripts%}
 		
 		<!-- stylesheet for colorbox jquery plugin -->
-		<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}styles/colorbox.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/colorbox.css' %}">
 
 		<!-- load jquery library from Google Content Network -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
-		<script type="text/javascript" src="{{STATIC_URL}}javascript/cloud-carousel.1.0.5.js"></script>
+		<script type="text/javascript" src="{% static 'javascript/cloud-carousel.1.0.5.js' %}"></script>
 
 		<script>
 		$(document).ready(function(){			   
@@ -34,7 +36,7 @@
 		</script>
 
 
-		<script type="text/javascript" src="{{STATIC_URL}}javascript/jquery.colorbox-min.js"></script>
+		<script type="text/javascript" src="{% static 'javascript/jquery.colorbox-min.js' %}"></script>
 		<script>
 		$(document).ready(function(){
 			$(".diagrams").colorbox({rel:'diagrams', transition:"none", width:"90%", height:"90%"});
@@ -55,7 +57,7 @@
 			<table id="vis">
 				<tr>
 					<td class="image">
-						<a href="../assignment_bubble/"><img src="{{STATIC_URL}}images/bubble_thumbnail.jpeg"></a>
+						<a href="../assignment_bubble/"><img src="{% static 'images/bubble_thumbnail.jpeg' %}"></a>
 					</td>
 					<td class="desc">
 						<h4>Which were the most popular titles?</h4>
@@ -65,7 +67,7 @@
 				</tr>
 				<tr>
 					<td class="image">
-						<a href="../location_dendrogram/"><img src="{{STATIC_URL}}images/dendrogram_thumbnail.jpeg"></a>
+						<a href="../location_dendrogram/"><img src="{% static 'images/dendrogram_thumbnail.jpeg' %}"></a>
 					</td>
 					<td class="desc">
 						<h4>Explore Locations</h4>
@@ -75,7 +77,7 @@
 				</tr>
 				<tr>
 					<td class="image">
-						<a href="../location_circlepack/"><img src="{{STATIC_URL}}images/circlepack_thumbnail.jpeg"></a>
+						<a href="../location_circlepack/"><img src="{% static 'images/circlepack_thumbnail.jpeg' %}"></a>
 					</td>
 					<td class="desc">
 						<h4>Where were people sent?</h4>
@@ -96,23 +98,23 @@
 				<li><span class="blue"><b>Assignments</b></span> records assignments in the foreign service (who was sent where, for what reason, and for what timespan)</li>
 				<li><span class="purple"><b>Validations</b></span> a citation system keeping track of primary and secondary sources and providing footnotes</li>
 			</ul>
-			<p>You can view the technical diagrams in the image carousel below, click on an image to see the diagram in a lightbox window.  You can also <a href="{{STATIC_URL}}images/diagrams/ProjectQuincy12-11-2012.pdf">download the diagrams</a>.</p>
+			<p>You can view the technical diagrams in the image carousel below, click on an image to see the diagram in a lightbox window.  You can also <a href="{% static 'images/diagrams/ProjectQuincy12-11-2012.pdf' %}">download the diagrams</a>.</p>
 			<p>The underlying software for the EAFSD is an open source project called <a href="http://www.projectquincy.org">Project Quincy</a>.  Project Quincy is growing out of the code written to run the EAFSD, but is designed to be reused by historians who want to create their own websites tracing people, places, and organizations through time and space.</p>
 			<p>The color coded, annotated diagrams were generated with <a target="_blank" href="http://www.jeanbauer.com/davila.html">DAVILA</a>.</p>
 			<!-- This is the container for the carousel. -->
-	        <div id = "carousel1" style="width:700px; height:300px; background: url({{STATIC_URL}}images/GhostedBlue.png); overflow:scroll;">
+	        <div id = "carousel1" style="width:700px; height:300px; background: url({% static 'images/GhostedBlue.png' %}); overflow:scroll;">
 
 	            <!-- All images with class of "cloudcarousel" will be turned into carousel items -->
 	            <!-- You can place links around these images -->
-	            <a  class="diagrams" href="{{STATIC_URL}}images/diagrams/AllModules.jpg" title="All Modules"><img class = "cloudcarousel" src="{{STATIC_URL}}images/diagrams/AllModules.jpg" alt="Diagram of all Modules" title="All Modules" width="164", height="128"/></a>
-	            <a class="diagrams" href="{{STATIC_URL}}images/diagrams/AllEntities.jpg" title="All Entities"><img class = "cloudcarousel" src="{{STATIC_URL}}images/diagrams/AllEntities.jpg" alt="Diagram of all Entities" title="All Entities" width="164", height="128"/></a>
-	            <a class="diagrams" href="{{STATIC_URL}}images/diagrams/LocationsModule.jpg" title="Locations"><img class = "cloudcarousel" src="{{STATIC_URL}}images/diagrams/LocationsModule.jpg" alt="Models geographic locations and their political/regional groupings." title="Locations" width="164", height="128"/></a>
-	            <a class="diagrams" href="{{STATIC_URL}}images/diagrams/IndividualsModule.jpg" title="Individuals"><img class = "cloudcarousel" src="{{STATIC_URL}}images/diagrams/IndividualsModule.jpg" alt="Models how people relate to each other and their various occupations" title="Individuals" width="164", height="128"/></a>
-	            <a class="diagrams" href="{{STATIC_URL}}images/diagrams/IndividualsWithResidences.jpg" title="Individuals with Locations"><img class = "cloudcarousel" src="{{STATIC_URL}}images/diagrams/IndividualsWithResidences.jpg" alt="Models where people lived" title="Individuals with Locations" width="164", height="128"/></a>
-	            <a class="diagrams" href="{{STATIC_URL}}images/diagrams/OrganizationsModule.jpg" title="Organizations"><img class = "cloudcarousel" src="{{STATIC_URL}}images/diagrams/OrganizationsModule.jpg" alt="Models how people are associated with different formalized groups" title="Organizations" width="164", height="128"/></a>
-	            <a class="diagrams" href="{{STATIC_URL}}images/diagrams/CorrespondenceModule.jpg" title="Correspondence"><img class = "cloudcarousel" src="{{STATIC_URL}}images/diagrams/CorrespondenceModule.jpg" alt="Models letters and and enclosures sent between people and organizations" title="Correspondence" width="164", height="128"/></a>
-	            <a class="diagrams" href="{{STATIC_URL}}images/diagrams/AssignmentsModule.jpg" title="Assignments"><img class = "cloudcarousel" src="{{STATIC_URL}}images/diagrams/AssignmentsModule.jpg" alt="Models assignments in the foreign service" title="Assignments" width="164", height="128"/></a>
-	            <a class="diagrams" href="{{STATIC_URL}}images/diagrams/ValidationsModule.jpg" title="Validations"><img class = "cloudcarousel" src="{{STATIC_URL}}images/diagrams/ValidationsModule.jpg" alt="The citation system." title="Validations" width="164", height="128"/></a>
+	            <a  class="diagrams" href="{% static 'images/diagrams/AllModules.jpg' %}" title="All Modules"><img class = "cloudcarousel" src="{% static 'images/diagrams/AllModules.jpg' %}" alt="Diagram of all Modules" title="All Modules" width="164", height="128"/></a>
+	            <a class="diagrams" href="{% static 'images/diagrams/AllEntities.jpg' %}" title="All Entities"><img class = "cloudcarousel" src="{% static 'images/diagrams/AllEntities.jpg' %}" alt="Diagram of all Entities" title="All Entities" width="164", height="128"/></a>
+	            <a class="diagrams" href="{% static 'images/diagrams/LocationsModule.jpg' %}" title="Locations"><img class = "cloudcarousel" src="{% static 'images/diagrams/LocationsModule.jpg' %}" alt="Models geographic locations and their political/regional groupings." title="Locations" width="164", height="128"/></a>
+	            <a class="diagrams" href="{% static 'images/diagrams/IndividualsModule.jpg' %}" title="Individuals"><img class = "cloudcarousel" src="{% static 'images/diagrams/IndividualsModule.jpg' %}" alt="Models how people relate to each other and their various occupations" title="Individuals" width="164", height="128"/></a>
+	            <a class="diagrams" href="{% static 'images/diagrams/IndividualsWithResidences.jpg' %}" title="Individuals with Locations"><img class = "cloudcarousel" src="{% static 'images/diagrams/IndividualsWithResidences.jpg' %}" alt="Models where people lived" title="Individuals with Locations" width="164", height="128"/></a>
+	            <a class="diagrams" href="{% static 'images/diagrams/OrganizationsModule.jpg' %}" title="Organizations"><img class = "cloudcarousel" src="{% static 'images/diagrams/OrganizationsModule.jpg' %}" alt="Models how people are associated with different formalized groups" title="Organizations" width="164", height="128"/></a>
+	            <a class="diagrams" href="{% static 'images/diagrams/CorrespondenceModule.jpg' %}" title="Correspondence"><img class = "cloudcarousel" src="{% static 'images/diagrams/CorrespondenceModule.jpg' %}" alt="Models letters and and enclosures sent between people and organizations" title="Correspondence" width="164", height="128"/></a>
+	            <a class="diagrams" href="{% static 'images/diagrams/AssignmentsModule.jpg' %}" title="Assignments"><img class = "cloudcarousel" src="{% static 'images/diagrams/AssignmentsModule.jpg' %}" alt="Models assignments in the foreign service" title="Assignments" width="164", height="128"/></a>
+	            <a class="diagrams" href="{% static 'images/diagrams/ValidationsModule.jpg' %}" title="Validations"><img class = "cloudcarousel" src="{% static 'images/diagrams/ValidationsModule.jpg' %}" alt="The citation system." title="Validations" width="164", height="128"/></a>
 
 
 		        <!-- Define elements to accept the alt and title text from the images. -->

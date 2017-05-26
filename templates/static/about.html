@@ -1,14 +1,14 @@
 <!--This template contains the text and images for the site's About page. -->
 
 {% extends "eafsd_base.html" %}
-
+{% load static %}
 
 {% block title %}About | {{ block.super }}{% endblock %}
 
 {% block main %}
 	<div id="content">
 		<div id="image" style="width:175px">
-			<img src="{{STATIC_URL}}images/John_Quincy_Adams_1824.png", alt="Photograph of John Quincy Adams">
+			<img src="{% static 'images/John_Quincy_Adams_1824.png' %}", alt="Photograph of John Quincy Adams">
 			<p class="caption">Copy of a lost daguerreotype of John</br>Quincy Adams by Philip Haas, 1843.</p>
 		</div> <!-- end image -->
 
