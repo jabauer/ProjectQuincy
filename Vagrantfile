@@ -29,6 +29,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   config.vm.synced_folder "vagrant-provision", "/home/vagrant/vagrant-provision"
-  config.vm.synced_folder "../Quincy2", "/home/vagrant/Quincy2"
+  config.vm.synced_folder "../ProjectQuincy", "/home/vagrant/ProjectQuincy"
 
 end

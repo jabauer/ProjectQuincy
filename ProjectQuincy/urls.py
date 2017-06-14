@@ -6,8 +6,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'Quincy2.views.home', name='home'),
-    # url(r'^Quincy2/', include('Quincy2.foo.urls')),
+    # url(r'^$', 'ProjectQuincy.views.home', name='home'),
+    # url(r'^ProjectQuincy/', include('ProjectQuincy.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

@@ -63,8 +63,8 @@ mysql -uroot -pvagrant -e "CREATE DATABASE IF NOT EXISTS eafsd DEFAULT CHARACTER
 
 ##clone ProjectQuincy code from github
 
-cd /home/vagrant/Quincy2
-# git clone https://github.com/jabauer/projectquincy2.git Quincy2
+cd /home/vagrant/ProjectQuincy
+# git clone https://github.com/jabauer/projectquincy2.git ProjectQuincy
 
 
 ## create database

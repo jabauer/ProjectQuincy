@@ -1,4 +1,4 @@
-# Django settings for Quincy2 project.
+# Django settings for ProjectQuincy project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -72,7 +72,7 @@ STATICFILES_DIRS = [
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/home/vagrant/Quincy2/static',
+    '/home/vagrant/ProjectQuincy/static',
 ]
 
 # List of finder classes that know how to find static files in
@@ -103,10 +103,10 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'Quincy2.urls'
+ROOT_URLCONF = 'ProjectQuincy.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'Quincy2.wsgi.application'
+WSGI_APPLICATION = 'ProjectQuincy.wsgi.application'
 
 TEMPLATES = [
     {

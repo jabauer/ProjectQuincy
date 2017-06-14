@@ -1,5 +1,5 @@
 """
-WSGI config for Quincy2 project.
+WSGI config for ProjectQuincy project.
 
 This module contains the WSGI application used by Django's development server
 and any production WSGI deployments. It should expose a module-level variable
@@ -15,7 +15,7 @@ framework.
 """
 import os
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Quincy2.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ProjectQuincy.settings")
 
 # This application object is used by any WSGI server configured to use this
 # file. This includes Django's development server, if the WSGI_APPLICATION
