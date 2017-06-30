@@ -1,3 +1,23 @@
-langauge: python
 sudo: false
 dist: trusty
+
+langauge: python
+
+pyton:
+  - "2.7"
+
+install:
+  - pip install -r vagrant-provision/requirements.txt
+  - pip install -r dev-requirements.txt
+  - pip install codecov
+  - cp ci/testsettings.py ProjectQuincy/local_settings.py
+  - python -c "import uuid; print('SECRET_KEY = \'%s\'' % uuid.uuid4())" >> ProjectQuincy/local_settings.py
+
+script:
+  - py.test --cov=ProjectQuincy
+
+sevices:
+  - mysql  
+
+after_success:
+  - codecov
