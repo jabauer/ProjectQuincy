@@ -3,7 +3,7 @@ dist: trusty
 
 langauge: python
 
-pyton:
+python:
   - "2.7"
 
 install:
