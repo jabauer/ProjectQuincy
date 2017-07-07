@@ -1,0 +1,32 @@
+[
+{
+  "fields": {
+    "created_at": "2009-03-16T17:30:23Z",
+    "notes": "This covers <b>all</b>: ministers, envoys, commissioners, diplomatic agents,  charges d'affaires, etc.",
+    "name": "diplomatic",
+    "updated_at": "2010-10-05T02:59:36Z"
+  },
+  "model": "activities.assignmenttype",
+  "pk": 676005164
+},
+{
+  "fields": {
+    "created_at": "2009-03-16T17:30:23Z",
+    "notes": "all the secretaries or clerks",
+    "name": "support staff",
+    "updated_at": "2009-03-16T17:30:23Z"
+  },
+  "model": "activities.assignmenttype",
+  "pk": 854258232
+},
+{
+  "fields": {
+    "created_at": "2009-03-16T17:30:23Z",
+    "notes": "this covers all variations on consul, as well as agents for commerce and seamen, etc.",
+    "name": "consular",
+    "updated_at": "2009-03-16T17:30:23Z"
+  },
+  "model": "activities.assignmenttype",
+  "pk": 1040335078
+}
+]

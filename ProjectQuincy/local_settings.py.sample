@@ -23,13 +23,3 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
-
-# CAS login configuration
-CAS_SERVER_URL = ''
-
-PUCAS_LDAP.update({
-    'SERVERS': [],
-    'SEARCH_BASE': '',
-    'SEARCH_FILTER': "(uid=%(user)s)",
-})

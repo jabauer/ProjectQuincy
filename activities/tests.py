@@ -6,6 +6,7 @@ Replace this with more appropriate tests for your application.
 """
 
 from django.test import TestCase
+from .models import AssignmentType
 
 
 class SimpleTest(TestCase):
@@ -14,3 +15,10 @@ class SimpleTest(TestCase):
         Tests that 1 + 1 always equals 2.
         """
         self.assertEqual(1 + 1, 2)
+
+class TestAssignmentType(TestCase):
+	fixtures = ['assignment_type.json']
+
+	def test_str(self):
+		atype = AssignmentType.objects.first()
+		assert unicode(atype) == atype.name
