@@ -220,7 +220,6 @@ CREATE TABLE `auth_user` (
 
 LOCK TABLES `auth_user` WRITE;
 /*!40000 ALTER TABLE `auth_user` DISABLE KEYS */;
-INSERT INTO `auth_user` VALUES (1,'jabauer','Jean','Bauer','jabauer@alumni.uchicago.edu','pbkdf2_sha256$10000$Ql1wkw22j7LJ$YOnipne6E2Qc/PNnjXFLRQCCRdzNHOSFkKklRLovxrU=',1,1,1,'2014-01-28 22:58:08','2012-10-01 18:23:23');
 /*!40000 ALTER TABLE `auth_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
