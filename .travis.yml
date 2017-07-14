@@ -14,7 +14,7 @@ install:
   - python -c "import uuid; print('SECRET_KEY = \'%s\'' % uuid.uuid4())" >> ProjectQuincy/local_settings.py
 
 script:
-  - python manage.py test
+  - py.test --cov
 
 sevices:
   - mysql  

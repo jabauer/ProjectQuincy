@@ -15,3 +15,7 @@
 # Vagrant #
 ######################
 .vagrant/*
+
+# py.test generated files #
+###########################
+.cache/
