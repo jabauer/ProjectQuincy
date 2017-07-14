@@ -53,6 +53,9 @@ apt-get -y install libxml2-dev libxslt-dev
 #install necessary python packages for the EAFSD
 sudo pip install -r /home/vagrant/vagrant-provision/requirements.txt
 
+#install testing packages COMMENT OUT IN PRODUCTION
+sudo pip install -r /home/vagrant/dev-requirements.txt
+
 
 # ## set up and populate database ##
 
@@ -64,7 +67,7 @@ mysql -uroot -pvagrant -e "CREATE DATABASE IF NOT EXISTS eafsd DEFAULT CHARACTER
 ##clone ProjectQuincy code from github
 
 cd /home/vagrant/ProjectQuincy
-# git clone https://github.com/jabauer/projectquincy2.git ProjectQuincy
+# git clone https://github.com/jabauer/projectquincy.git ProjectQuincy
 
 
 ## create database

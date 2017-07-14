@@ -1,0 +1,32 @@
+[
+{
+    "fields": {
+        "entry": "Smith, Walter Burges. <i>America's diplomats and consuls of 1776-1865 : a geographic and biographic directory of the Foreign Service from the Declaration of Independence to the end of the Civil War.</i> Washington, D.C. : Center for the Study of Foreign Affairs, Foreign Service Institute, U.S. Dept. of State, 1987.",
+        "notes": "",
+        "created_at": "2009-10-28T18:26:49Z",
+        "updated_at": "2009-10-28T18:26:49Z"
+    },
+    "model": "citations.bibliography",
+    "pk": 1
+},
+{
+    "fields": {
+        "entry": "U.S. Army Center for Military History.  http://www.history.army.mil/",
+        "notes": "",
+        "created_at": "2011-12-27T21:30:24Z",
+        "updated_at": "2011-12-27T21:30:24Z"
+    },
+    "model": "citations.bibliography",
+    "pk": 2
+},
+{
+    "fields": {
+        "entry": "<i>The Papers of John Jay</i>. ed. James Baird. New York: Columbia University Libraries, 2002. http://www.columbia.edu/cu/lweb/digital/jay/",
+        "notes": "",
+        "created_at": "2012-01-03T02:10:48Z",
+        "updated_at": "2012-01-03T02:10:48Z"
+    },
+    "model": "citations.bibliography",
+    "pk": 3
+}
+]

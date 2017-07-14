@@ -1,0 +1,40 @@
+[
+{
+    "fields": {
+        "notes": "",
+        "citation": 1,
+        "updated_at": "2009-10-29T02:46:47Z",
+        "object_id": 1235,
+        "content_type": [
+            "activities",
+            "assignment"
+        ],
+        "auth_user": [
+            "jabauer"
+        ],
+        "supports": true,
+        "created_at": "2009-10-29T02:46:47Z"
+    },
+    "model": "citations.validation",
+    "pk": 5398
+},
+{
+    "fields": {
+        "notes": "",
+        "citation": 1,
+        "updated_at": "2009-10-29T02:46:48Z",
+        "object_id": 1236,
+        "content_type": [
+            "activities",
+            "assignment"
+        ],
+        "auth_user": [
+            "jabauer"
+        ],
+        "supports": true,
+        "created_at": "2009-10-29T02:46:48Z"
+    },
+    "model": "citations.validation",
+    "pk": 5399
+}
+]

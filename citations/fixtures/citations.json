@@ -1,0 +1,41 @@
+[
+{
+    "fields": {
+        "canonic_url": "",
+        "bibliography": 1,
+        "title": "America's diplomats and consuls of 1776-1865",
+        "created_at": "2009-10-28T18:26:49Z",
+        "updated_at": "2009-10-28T18:26:49Z",
+        "pages": "",
+        "notes": "The data in this study was bulk loaded from a spreadsheet (created after the pages were scanned and run through OCR).  Page numbers were not retained in the digitization process."
+    },
+    "model": "citations.citation",
+    "pk": 1
+},
+{
+    "fields": {
+        "canonic_url": "http://www.history.army.mil/books/RevWar/ss/fitzsimons.htm",
+        "bibliography": 2,
+        "title": "Thomas Fitzsimons",
+        "created_at": "2011-12-27T21:30:24Z",
+        "updated_at": "2011-12-27T21:30:24Z",
+        "pages": "",
+        "notes": ""
+    },
+    "model": "citations.citation",
+    "pk": 2
+},
+{
+    "fields": {
+        "canonic_url": "http://wwwapp.cc.columbia.edu/ldpd/jay/image?key=columbia.jay.00888&p=29",
+        "bibliography": 3,
+        "title": "Rodney Homes to George Murray, Vice Admiral. Sandy Hook, August  3, 1794",
+        "created_at": "2012-02-07T13:10:54Z",
+        "updated_at": "2012-02-07T13:10:54Z",
+        "pages": "",
+        "notes": ""
+    },
+    "model": "citations.citation",
+    "pk": 3
+}
+]

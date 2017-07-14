@@ -1,0 +1,20 @@
+[
+{
+    "fields": {
+        "username": "jabauer",
+        "first_name": "Abigail",
+        "last_name": "Adams",
+        "is_active": true,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2017-07-07T17:31:28Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "sayfriendandenter",
+        "email": "abigail@uchicago.edu",
+        "date_joined": "2012-10-01T18:23:23Z"
+    },
+    "model": "auth.user",
+    "pk": 1
+}
+]
