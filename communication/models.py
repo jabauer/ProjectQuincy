@@ -48,4 +48,4 @@ class Enclosure(models.Model):
     class Meta:
         db_table = u'enclosures'
     def __unicode__(self):
-        return u'%s endlosed in %s'(self.enclosed_letter, self.enclosed_letter)
+        return u'%s enclosed in %s' % (self.enclosed_letter, self.main_letter)

@@ -1,0 +1,47 @@
+[
+{
+    "fields": {
+        "created_at": "2009-03-13T14:03:25Z",
+        "name": "North America",
+        "updated_at": "2009-03-13T14:03:25Z"
+    },
+    "model": "places.continent",
+    "pk": 74295373
+},
+{
+    "fields": {
+        "created_at": "2009-03-13T14:03:25Z",
+        "name": "Africa",
+        "updated_at": "2009-03-13T14:03:25Z"
+    },
+    "model": "places.continent",
+    "pk": 432531999
+},
+{
+    "fields": {
+        "created_at": "2009-03-13T14:03:25Z",
+        "name": "South America",
+        "updated_at": "2009-03-13T14:03:25Z"
+    },
+    "model": "places.continent",
+    "pk": 619340803
+},
+{
+    "fields": {
+        "created_at": "2009-03-13T14:03:25Z",
+        "name": "Asia",
+        "updated_at": "2009-03-13T14:03:25Z"
+    },
+    "model": "places.continent",
+    "pk": 655351082
+},
+{
+    "fields": {
+        "created_at": "2009-03-13T14:03:25Z",
+        "name": "Europe",
+        "updated_at": "2009-03-13T14:03:25Z"
+    },
+    "model": "places.continent",
+    "pk": 930672604
+}
+]

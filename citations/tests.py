@@ -12,7 +12,6 @@ from django.test import TestCase
 from .models import Bibliography, Citation, Validation
 
 
-
 class TestBibliography(TestCase):
 	fixtures = ['bibliography.json']
 

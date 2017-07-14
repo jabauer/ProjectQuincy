@@ -1,0 +1,24 @@
+[
+{
+    "fields": {
+        "updated_at": "2012-01-16T03:12:09Z",
+        "created_at": "2012-01-16T03:12:09Z",
+        "notes": "",
+        "main_letter": 31,
+        "enclosed_letter": 33
+    },
+    "model": "communication.enclosure",
+    "pk": 2
+},
+{
+    "fields": {
+        "updated_at": "2012-01-16T03:12:09Z",
+        "created_at": "2012-01-16T03:12:09Z",
+        "notes": "",
+        "main_letter": 31,
+        "enclosed_letter": 34
+    },
+    "model": "communication.enclosure",
+    "pk": 3
+}
+]

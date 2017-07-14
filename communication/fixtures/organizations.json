@@ -1,0 +1,18 @@
+[
+{
+    "fields": {
+        "start_year": null,
+        "name": "Commissioners",
+        "org_bio": "",
+        "end_year": null,
+        "notes": "These Commissioners had their letters forwarded to John Jay during his mission to Great Britain in 1794.  More research is required to determine who they were.",
+        "updated_at": "2012-01-16T03:32:47Z",
+        "location": 336,
+        "organization_type": null,
+        "magazine_sending": null,
+        "created_at": "2011-12-31T03:38:21Z"
+    },
+    "model": "activities.organization",
+    "pk": 1
+}
+]

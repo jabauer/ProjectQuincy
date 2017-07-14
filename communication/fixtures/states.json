@@ -1,0 +1,13 @@
+[
+{
+    "fields": {
+        "updated_at": "2011-12-06T21:48:56Z",
+        "created_at": "2011-12-06T21:48:56Z",
+        "notes": "",
+        "name": "Virginia",
+        "continent": 74295373
+    },
+    "model": "places.state",
+    "pk": 81
+}
+]

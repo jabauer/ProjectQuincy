@@ -1,0 +1,90 @@
+[
+{
+    "fields": {
+        "death_month_known": true,
+        "birth_month_known": true,
+        "birth_year_known": true,
+        "name": "Edmund Jennings Randolph",
+        "notes": "",
+        "death_date": "1813-09-12",
+        "updated_at": "2012-11-04T00:12:09Z",
+        "sex": "male",
+        "state": 81,
+        "birth_day_known": true,
+        "death_year_known": true,
+        "birth_date": "1753-08-10",
+        "american": null,
+        "sort_name": "RandolphEdmundJennings",
+        "created_at": "2011-12-06T21:48:56Z",
+        "death_day_known": true
+    },
+    "model": "people.individual",
+    "pk": 572
+},
+{
+    "fields": {
+        "death_month_known": null,
+        "birth_month_known": null,
+        "birth_year_known": null,
+        "name": "Charles Williamson",
+        "notes": "There is a chapter written on Williamson in the \"Crooked Lake Review.\"  More research required. \r\nhttp://www.crookedlakereview.com/books/saints_sinners/martin4.html",
+        "death_date": null,
+        "updated_at": "2012-11-04T00:10:20Z",
+        "sex": "male",
+        "state": null,
+        "birth_day_known": null,
+        "death_year_known": null,
+        "birth_date": null,
+        "american": null,
+        "sort_name": "WilliamsonCharles",
+        "created_at": "2011-12-31T03:51:39Z",
+        "death_day_known": null
+    },
+    "model": "people.individual",
+    "pk": 581
+},
+{
+    "fields": {
+        "death_month_known": null,
+        "birth_month_known": null,
+        "birth_year_known": null,
+        "name": "R.H. Sheaffe",
+        "notes": "more research required",
+        "death_date": null,
+        "updated_at": "2012-11-04T00:09:56Z",
+        "sex": "male",
+        "state": null,
+        "birth_day_known": null,
+        "death_year_known": null,
+        "birth_date": null,
+        "american": null,
+        "sort_name": "SheaffeRH",
+        "created_at": "2011-12-31T03:55:31Z",
+        "death_day_known": null
+    },
+    "model": "people.individual",
+    "pk": 582
+},
+{
+    "fields": {
+        "death_month_known": null,
+        "birth_month_known": null,
+        "birth_year_known": null,
+        "name": "Mr. Little",
+        "notes": "more research required",
+        "death_date": null,
+        "updated_at": "2012-11-04T00:09:47Z",
+        "sex": "male",
+        "state": null,
+        "birth_day_known": null,
+        "death_year_known": null,
+        "birth_date": null,
+        "american": null,
+        "sort_name": "Little",
+        "created_at": "2011-12-31T03:55:31Z",
+        "death_day_known": null
+    },
+    "model": "people.individual",
+    "pk": 583
+}
+]

@@ -1,0 +1,14 @@
+[
+{
+    "fields": {
+        "short_name": "WGS 84",
+        "reference": "",
+        "created_at": null,
+        "updated_at": null,
+        "long_name": "",
+        "notes": ""
+    },
+    "model": "places.coordinatesystem",
+    "pk": 1
+}
+]
