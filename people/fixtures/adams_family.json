@@ -1,0 +1,68 @@
+[
+{
+    "fields": {
+        "death_month_known": true,
+        "birth_month_known": true,
+        "birth_year_known": true,
+        "name": "John Adams",
+        "notes": "",
+        "death_date": "1826-07-04",
+        "updated_at": "2010-02-12T20:44:20Z",
+        "sex": "male",
+        "state": 78,
+        "birth_day_known": true,
+        "death_year_known": true,
+        "birth_date": "1735-10-30",
+        "american": true,
+        "sort_name": "adamsjohn",
+        "created_at": "2009-03-17T22:45:15Z",
+        "death_day_known": true
+    },
+    "model": "people.individual",
+    "pk": 1
+},
+{
+    "fields": {
+        "death_month_known": true,
+        "birth_month_known": true,
+        "birth_year_known": true,
+        "name": "John Quincy Adams",
+        "notes": "",
+        "death_date": "1848-02-23",
+        "updated_at": "2010-02-12T20:42:26Z",
+        "sex": "male",
+        "state": 78,
+        "birth_day_known": true,
+        "death_year_known": true,
+        "birth_date": "1767-07-11",
+        "american": true,
+        "sort_name": "adamsjohnquincy",
+        "created_at": "2009-03-17T22:45:15Z",
+        "death_day_known": true
+    },
+    "model": "people.individual",
+    "pk": 14
+},
+{
+    "fields": {
+        "death_month_known": null,
+        "birth_month_known": null,
+        "birth_year_known": null,
+        "name": "Thomas Boylston Adams",
+        "notes": "",
+        "death_date": null,
+        "updated_at": "2009-11-23T16:20:08Z",
+        "sex": "male",
+        "state": null,
+        "birth_day_known": null,
+        "death_year_known": null,
+        "birth_date": null,
+        "american": true,
+        "sort_name": "adamsthomasboylston",
+        "created_at": "2009-03-17T22:45:18Z",
+        "death_day_known": null
+    },
+    "model": "people.individual",
+    "pk": 264
+}
+]

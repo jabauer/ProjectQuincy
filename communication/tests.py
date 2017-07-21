@@ -1,8 +1,5 @@
 """
-This file demonstrates writing tests using the unittest module. These will pass
-when you run "manage.py test".
-
-Replace this with more appropriate tests for your application.
+This file contains the tests for the COMMUNICATIONS APP
 """
 
 from django.core.urlresolvers import reverse
@@ -11,7 +8,9 @@ from django.test import TestCase
 from .models import Letter, Enclosure
 
 class TestLetter(TestCase):
-	fixtures = ['organizations.json','individuals.json','coordinate_system.json','continents.json','states.json','locations.json','letters.json']
+	fixtures = ['organizations.json','individuals.json',
+	'coordinate_system.json','continents.json','states.json',
+	'locations.json','letters.json']
 
 	def test_str(self):
 		l = Letter.objects.first()
@@ -19,7 +18,9 @@ class TestLetter(TestCase):
 
 
 class TestEnclosure(TestCase):
-	fixtures = ['organizations.json','individuals.json','coordinate_system.json','continents.json','states.json','locations.json','letters.json', 'enclosures.json']
+	fixtures = ['organizations.json','individuals.json',
+	'coordinate_system.json','continents.json','states.json',
+	'locations.json','letters.json', 'enclosures.json']
 
 	def test_str(self):
 		e = Enclosure.objects.first()
@@ -27,7 +28,9 @@ class TestEnclosure(TestCase):
 
 
 class TestCommunicationViews(TestCase):
-	fixtures = ['organizations.json','individuals.json','coordinate_system.json','continents.json','states.json','locations.json','letters.json']
+	fixtures = ['organizations.json','individuals.json',
+	'coordinate_system.json','continents.json','states.json',
+	'locations.json','letters.json']
 
 	def test_letter_list(self):
 		letter_list_url = reverse('letter_list')

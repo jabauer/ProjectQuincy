@@ -1,4 +1,5 @@
-# Create your views here.
+##This file contains the view functions for the PEOPLE App
+
 from django.shortcuts import render, redirect, get_object_or_404
 from simplesearch.functions import *
 from .models import Individual

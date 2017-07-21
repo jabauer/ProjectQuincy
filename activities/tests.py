@@ -35,6 +35,10 @@ class TestActivitiesViews(TestCase):
 		self.assertContains(response, '%d total' % AssignmentType.objects.count())
 
 	def test_assignment_type_detail(self):
-		atype_detail_url = reverse('assignment_type_detail', args=[1])
-		response = self.client.get(atype_detail_url)
+		atypeBAD_detail_url = reverse('assignment_type_detail', args=[1])
+		response = self.client.get(atypeBAD_detail_url)
 		assert response.status_code == 404
+		diplomat = AssignmentType.objects.get(pk=676005164)
+		atypeGOOD_detail_url = reverse('assignment_type_detail', args=[diplomat.pk])
+		response = self.client.get(atypeGOOD_detail_url)
+		assert response.status_code == 200
