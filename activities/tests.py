@@ -1,14 +1,15 @@
 """
-This file demonstrates writing tests using the unittest module. These will pass
-when you run "manage.py test".
-
-Replace this with more appropriate tests for your application.
+This is the tests.py file for the ACTIVITIES app
+These tests handle models and views related to the Organizations
+	and Assigments Modules
 """
 
 from django.core.urlresolvers import reverse
 from django.test import TestCase
 
-from .models import AssignmentType
+from .models import AssignmentType, AssignmentTitle, Assignment, OrganizationType, Organization, OrgEvolutionType, OrgEvolution, RoleType, RoleTitle, Member
+from people.models import Individual
+from places.models import Location
 
 
 class TestAssignmentType(TestCase):
@@ -18,6 +19,70 @@ class TestAssignmentType(TestCase):
 		atype = AssignmentType.objects.first()
 		assert unicode(atype) == atype.name
 
+class TestAssignmentTitle(TestCase):
+
+	def test_str(self):
+		atitle = AssignmentTitle.objects.create(name="Envoy Extraordinaire")
+		assert unicode(atitle) == atitle.name
+
+class TestAssignment(TestCase):
+
+	def test_str(self):
+		i = Individual.objects.create(name="Abigail Adams")
+		atitle = AssignmentTitle.objects.create(name="One who knows all")
+		loc = Location.objects.create(name="All of time and space")
+		assignment = Assignment.objects.create(individual=i, assignment_title=atitle, location=loc, 
+			start_year=1744, end_year=1818)
+		assert unicode(assignment) == u'%s | %s | %s | %d | %d' % (assignment.individual, assignment.assignment_title, assignment.location, assignment.start_year, assignment.end_year)
+
+class TestOrganizationType(TestCase):
+
+	def test_str(self):
+		otype = OrganizationType.objects.create(name="Fan Club")
+		assert unicode(otype) == otype.name
+
+class TestOrganization(TestCase):
+
+	def test_str(self):
+		org = Organization.objects.create(name="Squirrel Girl Appreciation Society")
+		assert unicode(org) == org.name
+
+class TestOrgEvolutionType(TestCase):
+
+	def test_str(self):
+		orgevtype = OrgEvolutionType.objects.create(name="Mutual Appreciation")
+		assert unicode(orgevtype) == orgevtype.name
+
+class TestOrgEvolution(TestCase):
+	"""docstring for TestOrgEvolution"""
+	def test_str(self):
+		sg = Organization.objects.create(name="Squirrel Girl Appreciation Society")
+		ch = Organization.objects.create(name="Chipmunk Hunk Appreciation Society")
+		ma = OrgEvolutionType.objects.create(name="Mutual Appreciation")
+		koi = OrgEvolution.objects.create(org_1=sg, org_2=ch, org_evolution_type=ma)
+		assert unicode(koi) == u'%s to %s | %s' % (koi.org_1, koi.org_2, koi.org_evolution_type)
+
+class TestRoleType(TestCase):
+
+	def test_str(self):
+		rtype = RoleType.objects.create(name="legislative")
+		assert unicode(rtype) == rtype.name
+
+class TestRoleTitle(TestCase):
+
+	def test_str(self):
+		rtitle = RoleTitle.objects.create(name="senator")
+		assert unicode(rtitle) == rtitle.name
+
+class TestMember(TestCase):
+
+	def test_str(self):
+		person = Individual.objects.create(name="Leia Organa")
+		org = Organization.objects.create(name="The Rebellion")
+		title = RoleTitle.objects.create(name="General")
+		princess = Member.objects.create(individual=person, organization=org, role_title=title)
+		assert unicode(princess) == u'%s | %s | %s' % (princess.individual, princess.organization, princess.role_title)
+		
 
 class TestActivitiesViews(TestCase):
 	fixtures = ['assignment_type.json']

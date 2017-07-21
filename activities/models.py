@@ -106,7 +106,7 @@ class OrgEvolution(models.Model):
     class Meta:
         db_table = u'org_evolutions'
     def __unicode__(self):
-        return u"%s to %s | %s" %(self.org_1, self.org_2, self.org_evolution_type)
+        return u"%s to %s | %s" % (self.org_1, self.org_2, self.org_evolution_type)
 
 
 class RoleType(models.Model):
@@ -146,5 +146,10 @@ class Member(models.Model):
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
     class Meta:
         db_table = u'members'
-    def __unicode__():
+    def __unicode__(self):
         return u"%s | %s | %s" % (self.individual, self.organization, self.role_title)
+
+
+
+
+
