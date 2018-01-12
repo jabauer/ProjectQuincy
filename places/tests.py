@@ -70,7 +70,7 @@ class TestInEmpire(TestCase):
 	def test_str(self):
 		ctype = Continent.objects.create(name="Corusant")
 		stype = State.objects.create(name="Corusant", continent=ctype)
-		etype = State.objects.create(name="Galactic Empire")
+		etype = Empire.objects.create(name="Galactic Empire")
 		in_empire = InEmpire.objects.create(state=stype, empire=etype)
 		assert unicode(in_empire) == u'%s in %s' % (in_empire.state, in_empire.empire)
 		
