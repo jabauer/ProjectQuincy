@@ -46,7 +46,7 @@ class TestContinent(TestCase):
 class TestState(TestCase):
 
 	def test_str(self):
-		ctype = "North America"
+		ctype = Continent.objects.create(name="North America")
 		stype = State.objects.create(name="Haiti", continent=ctype)
 		assert unicode(stype) == stype.name
 
