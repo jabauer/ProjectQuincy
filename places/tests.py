@@ -55,7 +55,7 @@ class TestInState(TestCase):
 	def test_str(self):
 		ltype = Location.objects.create(name="Asbury Park")
 		ctype = Continent.objects.create(name="North America")
-		stype = State.objects.create(name="New Jersey")
+		stype = State.objects.create(name="New Jersey", continent=ctype)
 		in_state = InState.objects.create(location=ltype, state=stype)
 		assert unicode(in_state) == u'%s in %s' % (in_state.location, in_state.state)
 
@@ -69,7 +69,7 @@ class TestInEmpire(TestCase):
 
 	def test_str(self):
 		ctype = Continent.objects.create(name="Corusant")
-		stype = State.objects.create(name="Corusant")
+		stype = State.objects.create(name="Corusant", continent=ctype)
 		etype = State.objects.create(name="Galactic Empire")
 		in_empire = InEmpire.objects.create(state=stype, empire=etype)
 		assert unicode(in_empire) == u'%s in %s' % (in_empire.state, in_empire.empire)
