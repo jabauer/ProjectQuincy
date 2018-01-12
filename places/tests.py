@@ -12,14 +12,14 @@ from .models import CoordinateSystem, Location, Region, InRegion, Continent, Sta
 class TestCoordinateSystem(TestCase):
 
 	def test_str(self):
-		cstype = CoordinateSystem.objects.create(name="WSG84")
-		assert unicode(cstype) == cstype.name
+		cstype = CoordinateSystem.objects.create(short_name="WSG84")
+		assert unicode(cstype) == cstype.short_name
 
 class TestLocation(TestCase):
 
 	def test_str(self):
 		ltype = Location.objects.create(name="Braintree")
-		cstype = CoordinateSystem.objects.create(name="WSG84")
+		cstype = CoordinateSystem.objects.create(short_name="WSG84")
 		assert unicode(ltype) == ltype.name
 
 class TestRegion(TestCase):
