@@ -1,0 +1,587 @@
+[
+{
+    "fields": {
+        "temporary": true,
+        "name": "Acting Commercial Agent",
+        "assignment_type": 1040335078,
+        "notes": null,
+        "updated_at": "2009-12-02T20:17:20Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 1
+},
+{
+    "fields": {
+        "temporary": true,
+        "name": "Acting Consul",
+        "assignment_type": 1040335078,
+        "notes": null,
+        "updated_at": "2009-12-02T20:17:54Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 2
+},
+{
+    "fields": {
+        "temporary": true,
+        "name": "Acting Consul General",
+        "assignment_type": 1040335078,
+        "notes": null,
+        "updated_at": "2009-12-02T20:18:24Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 3
+},
+{
+    "fields": {
+        "temporary": true,
+        "name": "Acting Consular Agent",
+        "assignment_type": 1040335078,
+        "notes": null,
+        "updated_at": "2009-12-02T20:18:52Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 4
+},
+{
+    "fields": {
+        "temporary": true,
+        "name": "Acting Vice Consul",
+        "assignment_type": 1040335078,
+        "notes": null,
+        "updated_at": "2009-12-02T20:19:15Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 5
+},
+{
+    "fields": {
+        "temporary": true,
+        "name": "Acting Vice Consul in Charge",
+        "assignment_type": 1040335078,
+        "notes": "\"Acting\" typically denotes a temporary position, held until the official replacement arrives.  More research is necessary to find out why the one assignment for \"Acting Vice Consul in Charge\" lasted for 49 years.",
+        "updated_at": "2009-12-02T20:22:32Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 6
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Agent for Claims and Seamen",
+        "assignment_type": 1040335078,
+        "notes": "Agents typically were not commissioned, however since only one person ever held this title more research is required.",
+        "updated_at": "2009-12-02T20:23:47Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 7
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Agent for Commerce and Seamen",
+        "assignment_type": 1040335078,
+        "notes": null,
+        "updated_at": "2009-12-02T20:24:22Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 8
+},
+{
+    "fields": {
+        "temporary": true,
+        "name": "Agent for Prisoners of War",
+        "assignment_type": 1040335078,
+        "notes": null,
+        "updated_at": "2012-09-10T20:49:36Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 9
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Chancellor of Consulate",
+        "assignment_type": 854258232,
+        "notes": null,
+        "updated_at": "2009-12-02T20:26:43Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 10
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Charge d'Affaires",
+        "assignment_type": 676005164,
+        "notes": null,
+        "updated_at": "2010-09-16T18:55:21Z",
+        "commissioned": true,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 11
+},
+{
+    "fields": {
+        "temporary": true,
+        "name": "Charge d'Affaires a.i.",
+        "assignment_type": 676005164,
+        "notes": "",
+        "updated_at": "2012-10-09T20:20:44Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 12
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Clerk to Consul General",
+        "assignment_type": 854258232,
+        "notes": null,
+        "updated_at": "2009-12-02T20:29:29Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 13
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Commercial Agent",
+        "assignment_type": 1040335078,
+        "notes": "This title is a curious artifact of the Napoleonic Era. After Napoleon declared himself \"First Consul\" he required that foreign consuls be retitled in the French Empire.  The Convention of 1800, which ended the Quasi-War, renamed all American consuls in French held ports \"Commercial Agents.\"",
+        "updated_at": "2013-04-19T02:38:17Z",
+        "commissioned": true,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 14
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Commissioner",
+        "assignment_type": 676005164,
+        "notes": null,
+        "updated_at": "2009-12-02T20:30:56Z",
+        "commissioned": true,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 15
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Commissioner (not COM)",
+        "assignment_type": 676005164,
+        "notes": null,
+        "updated_at": "2009-12-02T20:31:21Z",
+        "commissioned": true,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 16
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Commissioner Plenipotentiary",
+        "assignment_type": 676005164,
+        "notes": "Research needed to verify commission.",
+        "updated_at": "2009-12-02T20:32:44Z",
+        "commissioned": true,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 17
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Consul",
+        "assignment_type": 1040335078,
+        "notes": null,
+        "updated_at": "2009-03-17T21:05:40Z",
+        "commissioned": true,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 18
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Consul General",
+        "assignment_type": 1040335078,
+        "notes": null,
+        "updated_at": "2009-12-03T23:03:58Z",
+        "commissioned": true,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 19
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Consul/ Claims Commissioner",
+        "assignment_type": 1040335078,
+        "notes": "Consuls were commissioned.",
+        "updated_at": "2009-12-03T23:04:29Z",
+        "commissioned": true,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 20
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Consular Agent",
+        "assignment_type": 1040335078,
+        "notes": "Even though this position has Agent in the title, it is clear from years served that this was a permanent position, since technically only American citizens could be commissioned as consuls (though there are many examples to the contrary).",
+        "updated_at": "2012-09-10T20:56:48Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 21
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Consular and Commercial Agent",
+        "assignment_type": 1040335078,
+        "notes": null,
+        "updated_at": "2009-12-03T23:05:36Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 22
+},
+{
+    "fields": {
+        "temporary": true,
+        "name": "Delegate U.S. Br. Commission",
+        "assignment_type": 676005164,
+        "notes": null,
+        "updated_at": "2009-12-03T23:06:17Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 23
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Diplomatic Agent",
+        "assignment_type": 676005164,
+        "notes": "This title appears to have only been used once -- for Charles Dumas.",
+        "updated_at": "2012-09-10T20:57:43Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 24
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Envoy Extraordinaire and Minister Plenipotentiary",
+        "assignment_type": 676005164,
+        "notes": null,
+        "updated_at": "2009-12-03T23:07:07Z",
+        "commissioned": true,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 25
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Minister Plenipotentiary",
+        "assignment_type": 676005164,
+        "notes": null,
+        "updated_at": "2009-12-03T23:07:31Z",
+        "commissioned": true,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 26
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Minister Resident",
+        "assignment_type": 676005164,
+        "notes": "This appointment came one year after the Portuguese royal family moved to Brazil to escape Napoleon I and made Rio de Janeiro the temporary capital of the Portuguese Empire.",
+        "updated_at": "2011-02-10T03:03:04Z",
+        "commissioned": true,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 27
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Secretary of Delegation",
+        "assignment_type": 854258232,
+        "notes": null,
+        "updated_at": "2009-12-03T23:08:10Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 28
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Secretary of Legation",
+        "assignment_type": 854258232,
+        "notes": null,
+        "updated_at": "2009-12-03T23:08:36Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 29
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Secretary of Negotiating Delegation",
+        "assignment_type": 854258232,
+        "notes": null,
+        "updated_at": "2009-12-03T23:08:50Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 30
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Secretary to Consul General",
+        "assignment_type": 854258232,
+        "notes": null,
+        "updated_at": "2009-12-03T23:09:13Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 31
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Secretary to Negotiating Commission",
+        "assignment_type": 854258232,
+        "notes": null,
+        "updated_at": "2009-12-03T23:09:54Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 32
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Secretary to Negotiating Delegation",
+        "assignment_type": 854258232,
+        "notes": null,
+        "updated_at": "2009-12-03T23:10:37Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 33
+},
+{
+    "fields": {
+        "temporary": true,
+        "name": "Secretary - Special Diplomatic Mission",
+        "assignment_type": 854258232,
+        "notes": null,
+        "updated_at": "2009-12-03T23:10:58Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:40Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 34
+},
+{
+    "fields": {
+        "temporary": true,
+        "name": "Special Agent for Claims",
+        "assignment_type": 1040335078,
+        "notes": null,
+        "updated_at": "2009-12-03T23:11:12Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:41Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 35
+},
+{
+    "fields": {
+        "temporary": true,
+        "name": "Special Agent to Portuguese Government",
+        "assignment_type": 676005164,
+        "notes": null,
+        "updated_at": "2010-01-10T22:15:28Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:41Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 36
+},
+{
+    "fields": {
+        "temporary": true,
+        "name": "Special Agent/Commissioner",
+        "assignment_type": 676005164,
+        "notes": null,
+        "updated_at": "2009-12-03T23:11:54Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:41Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 37
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Special Commissioner",
+        "assignment_type": 676005164,
+        "notes": null,
+        "updated_at": "2009-12-03T23:12:13Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:41Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 38
+},
+{
+    "fields": {
+        "temporary": true,
+        "name": "Special Diplomatic Agent",
+        "assignment_type": 676005164,
+        "notes": null,
+        "updated_at": "2010-01-10T22:22:24Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:41Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 39
+},
+{
+    "fields": {
+        "temporary": true,
+        "name": "Special Negotiator",
+        "assignment_type": 676005164,
+        "notes": null,
+        "updated_at": "2012-09-10T21:00:19Z",
+        "commissioned": true,
+        "created_at": "2009-03-17T21:05:41Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 40
+},
+{
+    "fields": {
+        "temporary": true,
+        "name": "Treaty Negotiator",
+        "assignment_type": 676005164,
+        "notes": null,
+        "updated_at": "2012-09-10T21:01:18Z",
+        "commissioned": true,
+        "created_at": "2009-03-17T21:05:41Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 41
+},
+{
+    "fields": {
+        "temporary": true,
+        "name": "Vice /Acting Consul",
+        "assignment_type": 1040335078,
+        "notes": "It appears that those who held this position, were acting as consul while technically holding the position of vice consul (which was rarely a commissioned title).  More research is required into the particulars of each case.",
+        "updated_at": "2009-12-03T23:15:49Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:41Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 42
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Vice Commercial Agent",
+        "assignment_type": 1040335078,
+        "notes": null,
+        "updated_at": "2009-12-03T23:16:13Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:41Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 43
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Vice Consul",
+        "assignment_type": 1040335078,
+        "notes": "Vice consul was typically an non commissioned post.  However, in some cases Vice Consuls were commissioned.  See the notes for each assignment record to determine if that officer held a commission as vice consul.",
+        "updated_at": "2009-12-03T23:17:24Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:41Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 44
+},
+{
+    "fields": {
+        "temporary": false,
+        "name": "Vice Consul in Charge",
+        "assignment_type": 1040335078,
+        "notes": null,
+        "updated_at": "2009-12-03T23:17:40Z",
+        "commissioned": false,
+        "created_at": "2009-03-17T21:05:41Z"
+    },
+    "model": "activities.assignmenttitle",
+    "pk": 45
+}
+]

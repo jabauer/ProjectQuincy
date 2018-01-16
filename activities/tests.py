@@ -85,7 +85,7 @@ class TestMember(TestCase):
 		
 
 class TestActivitiesViews(TestCase):
-	fixtures = ['assignment_type.json']
+	fixtures = ['assignment_type.json', 'assignment_titles.json']
 
 	def test_assignment_type_list(self):
 		atype_list_url = reverse('assignment_type_list')
@@ -107,3 +107,22 @@ class TestActivitiesViews(TestCase):
 		atypeGOOD_detail_url = reverse('assignment_type_detail', args=[diplomat.pk])
 		response = self.client.get(atypeGOOD_detail_url)
 		assert response.status_code == 200
+
+	def test_assignment_title_list(self):
+		atitle_list_url = reverse('assignment_title_list')
+		response = self.client.get(atitle_list_url)
+		assert response.status_code == 200
+		for atitle in AssignmentTitle.objects.all():
+			self.assertContains(response, atitle.name,
+				msg_prefix='assignment title list should include %s' % atitle.name)
+			self.assertContains(response, reverse('assignment_title_detail', args=[atitle.id]),
+				msg_prefix='assignment title list should include %s' % atitle.id)
+		#print response.content
+		self.assertContains(response, '%d total' % AssignmentTitle.objects.count())
+
+
+
+
+
+
+		
