@@ -4,7 +4,7 @@
         "temporary": true,
         "name": "Acting Commercial Agent",
         "assignment_type": 1040335078,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-02T20:17:20Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:40Z"
@@ -17,7 +17,7 @@
         "temporary": true,
         "name": "Acting Consul",
         "assignment_type": 1040335078,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-02T20:17:54Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:40Z"
@@ -30,7 +30,7 @@
         "temporary": true,
         "name": "Acting Consul General",
         "assignment_type": 1040335078,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-02T20:18:24Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:40Z"
@@ -43,7 +43,7 @@
         "temporary": true,
         "name": "Acting Consular Agent",
         "assignment_type": 1040335078,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-02T20:18:52Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:40Z"
@@ -56,7 +56,7 @@
         "temporary": true,
         "name": "Acting Vice Consul",
         "assignment_type": 1040335078,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-02T20:19:15Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:40Z"
@@ -95,7 +95,7 @@
         "temporary": false,
         "name": "Agent for Commerce and Seamen",
         "assignment_type": 1040335078,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-02T20:24:22Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:40Z"
@@ -108,7 +108,7 @@
         "temporary": true,
         "name": "Agent for Prisoners of War",
         "assignment_type": 1040335078,
-        "notes": null,
+        "notes": "",
         "updated_at": "2012-09-10T20:49:36Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:40Z"
@@ -121,7 +121,7 @@
         "temporary": false,
         "name": "Chancellor of Consulate",
         "assignment_type": 854258232,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-02T20:26:43Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:40Z"
@@ -134,7 +134,7 @@
         "temporary": false,
         "name": "Charge d'Affaires",
         "assignment_type": 676005164,
-        "notes": null,
+        "notes": "",
         "updated_at": "2010-09-16T18:55:21Z",
         "commissioned": true,
         "created_at": "2009-03-17T21:05:40Z"
@@ -160,7 +160,7 @@
         "temporary": false,
         "name": "Clerk to Consul General",
         "assignment_type": 854258232,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-02T20:29:29Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:40Z"
@@ -186,7 +186,7 @@
         "temporary": false,
         "name": "Commissioner",
         "assignment_type": 676005164,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-02T20:30:56Z",
         "commissioned": true,
         "created_at": "2009-03-17T21:05:40Z"
@@ -199,7 +199,7 @@
         "temporary": false,
         "name": "Commissioner (not COM)",
         "assignment_type": 676005164,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-02T20:31:21Z",
         "commissioned": true,
         "created_at": "2009-03-17T21:05:40Z"
@@ -225,7 +225,7 @@
         "temporary": false,
         "name": "Consul",
         "assignment_type": 1040335078,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-03-17T21:05:40Z",
         "commissioned": true,
         "created_at": "2009-03-17T21:05:40Z"
@@ -238,7 +238,7 @@
         "temporary": false,
         "name": "Consul General",
         "assignment_type": 1040335078,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-03T23:03:58Z",
         "commissioned": true,
         "created_at": "2009-03-17T21:05:40Z"
@@ -277,7 +277,7 @@
         "temporary": false,
         "name": "Consular and Commercial Agent",
         "assignment_type": 1040335078,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-03T23:05:36Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:40Z"
@@ -290,7 +290,7 @@
         "temporary": true,
         "name": "Delegate U.S. Br. Commission",
         "assignment_type": 676005164,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-03T23:06:17Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:40Z"
@@ -316,7 +316,7 @@
         "temporary": false,
         "name": "Envoy Extraordinaire and Minister Plenipotentiary",
         "assignment_type": 676005164,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-03T23:07:07Z",
         "commissioned": true,
         "created_at": "2009-03-17T21:05:40Z"
@@ -329,7 +329,7 @@
         "temporary": false,
         "name": "Minister Plenipotentiary",
         "assignment_type": 676005164,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-03T23:07:31Z",
         "commissioned": true,
         "created_at": "2009-03-17T21:05:40Z"
@@ -355,7 +355,7 @@
         "temporary": false,
         "name": "Secretary of Delegation",
         "assignment_type": 854258232,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-03T23:08:10Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:40Z"
@@ -368,7 +368,7 @@
         "temporary": false,
         "name": "Secretary of Legation",
         "assignment_type": 854258232,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-03T23:08:36Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:40Z"
@@ -381,7 +381,7 @@
         "temporary": false,
         "name": "Secretary of Negotiating Delegation",
         "assignment_type": 854258232,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-03T23:08:50Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:40Z"
@@ -394,7 +394,7 @@
         "temporary": false,
         "name": "Secretary to Consul General",
         "assignment_type": 854258232,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-03T23:09:13Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:40Z"
@@ -407,7 +407,7 @@
         "temporary": false,
         "name": "Secretary to Negotiating Commission",
         "assignment_type": 854258232,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-03T23:09:54Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:40Z"
@@ -420,7 +420,7 @@
         "temporary": false,
         "name": "Secretary to Negotiating Delegation",
         "assignment_type": 854258232,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-03T23:10:37Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:40Z"
@@ -433,7 +433,7 @@
         "temporary": true,
         "name": "Secretary - Special Diplomatic Mission",
         "assignment_type": 854258232,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-03T23:10:58Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:40Z"
@@ -446,7 +446,7 @@
         "temporary": true,
         "name": "Special Agent for Claims",
         "assignment_type": 1040335078,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-03T23:11:12Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:41Z"
@@ -459,7 +459,7 @@
         "temporary": true,
         "name": "Special Agent to Portuguese Government",
         "assignment_type": 676005164,
-        "notes": null,
+        "notes": "",
         "updated_at": "2010-01-10T22:15:28Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:41Z"
@@ -472,7 +472,7 @@
         "temporary": true,
         "name": "Special Agent/Commissioner",
         "assignment_type": 676005164,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-03T23:11:54Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:41Z"
@@ -485,7 +485,7 @@
         "temporary": false,
         "name": "Special Commissioner",
         "assignment_type": 676005164,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-03T23:12:13Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:41Z"
@@ -498,7 +498,7 @@
         "temporary": true,
         "name": "Special Diplomatic Agent",
         "assignment_type": 676005164,
-        "notes": null,
+        "notes": "",
         "updated_at": "2010-01-10T22:22:24Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:41Z"
@@ -511,7 +511,7 @@
         "temporary": true,
         "name": "Special Negotiator",
         "assignment_type": 676005164,
-        "notes": null,
+        "notes": "",
         "updated_at": "2012-09-10T21:00:19Z",
         "commissioned": true,
         "created_at": "2009-03-17T21:05:41Z"
@@ -524,7 +524,7 @@
         "temporary": true,
         "name": "Treaty Negotiator",
         "assignment_type": 676005164,
-        "notes": null,
+        "notes": "",
         "updated_at": "2012-09-10T21:01:18Z",
         "commissioned": true,
         "created_at": "2009-03-17T21:05:41Z"
@@ -550,7 +550,7 @@
         "temporary": false,
         "name": "Vice Commercial Agent",
         "assignment_type": 1040335078,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-03T23:16:13Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:41Z"
@@ -576,7 +576,7 @@
         "temporary": false,
         "name": "Vice Consul in Charge",
         "assignment_type": 1040335078,
-        "notes": null,
+        "notes": "",
         "updated_at": "2009-12-03T23:17:40Z",
         "commissioned": false,
         "created_at": "2009-03-17T21:05:41Z"
