@@ -85,7 +85,7 @@ class TestPeopleViews(TestCase):
 		i_detail_url = reverse('individual_detail', args=[jqa.pk])
 		response = self.client.get(i_detail_url)
 		assert response.status_code == 200
-		print response.content
+		#print response.content
 
 """
 TESTS STILL TO WRITE

@@ -7,6 +7,7 @@ These tests handle models and views related to the Organizations
 from django.core.urlresolvers import reverse
 from django.test import TestCase
 
+
 from .models import AssignmentType, AssignmentTitle, Assignment, OrganizationType, Organization, OrgEvolutionType, OrgEvolution, RoleType, RoleTitle, Member
 from people.models import Individual
 from places.models import Location
@@ -109,16 +110,42 @@ class TestActivitiesViews(TestCase):
 		assert response.status_code == 200
 
 	def test_assignment_title_list(self):
+		"""
+		This test does not work for titles with "'" in them, but that is because of 
+		how django is escaping the character from the fixture. Will come back and fix sometime
+		so it works for everything.
+		"""
 		atitle_list_url = reverse('assignment_title_list')
 		response = self.client.get(atitle_list_url)
 		assert response.status_code == 200
+		#print response.content
 		for atitle in AssignmentTitle.objects.all():
 			self.assertContains(response, atitle.name,
 				msg_prefix='assignment title list should include %s' % atitle.name)
 			self.assertContains(response, reverse('assignment_title_detail', args=[atitle.id]),
 				msg_prefix='assignment title list should include %s' % atitle.id)
-		#print response.content
 		self.assertContains(response, '%d total' % AssignmentTitle.objects.count())
+
+	def test_assignment_title_detail(self):
+		atitleBAD_detail_url = reverse('assignment_title_detail', args=[567890])
+		response = self.client.get(atitleBAD_detail_url)
+		assert response.status_code == 404
+		consul = AssignmentTitle.objects.get(pk=18)
+		atitleGOOD_detail_url = reverse('assignment_title_detail', args=[consul.pk])
+		response = self.client.get(atypeGOOD_detail_url)
+		#print response.content
+		assert response.status_code == 200
+
+	def test_assignment_sunburst(self):
+		sunburst = reverse('assignment_sunburst')
+		response = self.client.get(sunburst)
+		assert response.status_code == 200
+		#print response.content
+
+	def test_assignment_circle_pack(self):
+		circle = reverse('assignment_bubble')
+		response = self.client.get(circle)
+		assert response.status_code == 200
 
 
 

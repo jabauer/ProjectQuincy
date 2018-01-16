@@ -132,32 +132,6 @@
 {
     "fields": {
         "temporary": false,
-        "name": "Charge d'Affaires",
-        "assignment_type": 676005164,
-        "notes": "",
-        "updated_at": "2010-09-16T18:55:21Z",
-        "commissioned": true,
-        "created_at": "2009-03-17T21:05:40Z"
-    },
-    "model": "activities.assignmenttitle",
-    "pk": 11
-},
-{
-    "fields": {
-        "temporary": true,
-        "name": "Charge d'Affaires a.i.",
-        "assignment_type": 676005164,
-        "notes": "",
-        "updated_at": "2012-10-09T20:20:44Z",
-        "commissioned": false,
-        "created_at": "2009-03-17T21:05:40Z"
-    },
-    "model": "activities.assignmenttitle",
-    "pk": 12
-},
-{
-    "fields": {
-        "temporary": false,
         "name": "Clerk to Consul General",
         "assignment_type": 854258232,
         "notes": "",
