@@ -1,20 +1,21 @@
 <!-- This is the show screen for a single Individual record -->
 
 {% extends "eafsd_base.html" %}
+{% load static %}
 
 {% block title %}{{ individual.name }} | {{ block.super }}{% endblock %}
 
 {% block scripts%}
 		
 		<!-- stylesheet for colorbox jquery plugin -->
-		<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}styles/colorbox-footnote.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/colorbox-footnote.css' %}">
 
 		<!-- load jquery library from Google Content Network -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
-		<script type="text/javascript" src="{{STATIC_URL}}javascript/jquery.colorbox-min.js"></script>
+		<script type="text/javascript" src="{% static 'javascript/jquery.colorbox-min.js' %}"></script>
 
-		<script type="text/javascript" src="{{STATIC_URL}}javascript/open-colorbox.js"></script>
+		<script type="text/javascript" src="{% static 'javascript/open-colorbox.js' %}"></script>
 
 {% endblock %}
 

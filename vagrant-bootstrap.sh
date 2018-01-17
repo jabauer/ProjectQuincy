@@ -51,10 +51,10 @@ apt-get -y install libxml2-dev libxslt-dev
 ## end main server installs
 
 #install necessary python packages for the EAFSD
-sudo pip install -r /home/vagrant/vagrant-provision/requirements.txt
+sudo pip install -r /home/vagrant/ProjectQuincy/requirements.txt
 
 #install testing packages COMMENT OUT IN PRODUCTION
-sudo pip install -r /home/vagrant/dev-requirements.txt
+sudo pip install -r /home/vagrant/ProjectQuincy/dev-requirements.txt
 
 
 # ## set up and populate database ##
@@ -72,7 +72,7 @@ cd /home/vagrant/ProjectQuincy
 
 ## create database
 
-mysql -uroot -pvagrant eafsd < /home/vagrant/vagrant-provision/2017-05-26_eafsd_dump.sql
+mysql -uroot -pvagrant eafsd < /home/vagrant/ProjectQuincy/2017-05-26_eafsd_dump.sql
 
 echo "---"
 echo "---"
