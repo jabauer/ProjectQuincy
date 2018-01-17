@@ -57,9 +57,5 @@ def assignment_by_type(request):
 def assignment_sunburst(request):
 	return render(request, 'activities/assignment_sunburst.html')
 
-def assignment_circle_pack(request):
-	return render(request, 'activities/assignment_circle_pack.html')
-
-
 def assignment_bubble(request):
 	return render(request, 'activities/assignment_bubble.html')

@@ -132,7 +132,7 @@ class TestActivitiesViews(TestCase):
 		assert response.status_code == 404
 		consul = AssignmentTitle.objects.get(pk=18)
 		atitleGOOD_detail_url = reverse('assignment_title_detail', args=[consul.pk])
-		response = self.client.get(atypeGOOD_detail_url)
+		response = self.client.get(atitleGOOD_detail_url)
 		#print response.content
 		assert response.status_code == 200
 
@@ -142,10 +142,11 @@ class TestActivitiesViews(TestCase):
 		assert response.status_code == 200
 		#print response.content
 
-	def test_assignment_circle_pack(self):
-		circle = reverse('assignment_bubble')
-		response = self.client.get(circle)
+	def test_assignment_bubble(self):
+		bubble = reverse('assignment_bubble')
+		response = self.client.get(bubble)
 		assert response.status_code == 200
+
 
 
 
