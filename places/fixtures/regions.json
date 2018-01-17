@@ -1,0 +1,12 @@
+[
+{
+    "fields": {
+        "created_at": "2009-12-03T23:24:40Z",
+        "notes": "",
+        "name": "Caribbean",
+        "updated_at": "2009-12-03T23:24:40Z"
+    },
+    "model": "places.region",
+    "pk": 1
+}
+]

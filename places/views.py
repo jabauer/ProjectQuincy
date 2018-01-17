@@ -1,12 +1,13 @@
 #places/views.py
 #This files contains the view functions for the PLACES APP.
 
-from django.shortcuts import render, redirect, get_object_or_404
-from .models import Continent, State, Location, Region, InRegion, InState
-from citations.models import Validation
-from activities.models import Assignment
-from simplesearch.functions import *
 from django.http import HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404
+from simplesearch.functions import *
+
+from .models import Continent, State, Location, Region, InRegion, InState
+from activities.models import Assignment
+from citations.models import Validation
 
 import operator
 
