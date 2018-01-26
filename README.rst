@@ -5,22 +5,10 @@ Project Quincy
 
 Project Quincy is an open source Django, MySQL application for tracing historical networks through time and space.
 
-The code in this repository runs `The Early American Foreign Service Database` www.eafsd.org
+The code in this repository runs `The Early American Foreign Service 
+Database` www.eafsd.org
 
-2.1.0
-======
-2.1 updates from Django 1.5 to Django 1.8. Almost all changes relate to the update.
-Tests have now been added to all apps, using pytest
-Project now integrates with Travis CI and CodeCov
-Docs Available through Sphinx
-
-
-This is the first official, release of Project Quincy. Semantic Versioning rationale follows: 
-- 1.0 First Rails Release: October 18, 2010
-- 2.0 First Django Release: February 13, 2013
-- 2.1 Updates to Django 1.8
-
-Python 2.7 / Django 1.8
+Python 2.7 / Django 1.9
 
 .. image:: https://travis-ci.org/jabauer/ProjectQuincy.svg?branch=master
     :target: https://travis-ci.org/jabauer/ProjectQuincy
