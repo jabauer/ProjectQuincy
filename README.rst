@@ -10,12 +10,12 @@ Database` www.eafsd.org
 
 Python 2.7 / Django 1.9
 
-.. image:: https://travis-ci.org/jabauer/ProjectQuincy.svg?branch=master
+.. image:: https://travis-ci.org/jabauer/ProjectQuincy.svg?branch=dev-2.2
     :target: https://travis-ci.org/jabauer/ProjectQuincy
     :alt: Build status
 
-.. image:: https://codecov.io/gh/jabauer/ProjectQuincy/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/jabauer/ProjectQuincy/branch/master
+.. image:: https://codecov.io/gh/jabauer/ProjectQuincy/branch/dev-2.2/graph/badge.svg
+    :target: https://codecov.io/gh/jabauer/ProjectQuincy/branch/dev-2.2
     :alt: Code coverage
 
 
