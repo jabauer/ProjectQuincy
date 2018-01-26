@@ -8,7 +8,7 @@ Project Quincy is an open source Django, MySQL application for tracing historica
 The code in this repository runs `The Early American Foreign Service 
 Database` www.eafsd.org
 
-Python 2.7 / Django 1.9
+Python 2.7 / Django 1.10
 
 .. image:: https://travis-ci.org/jabauer/ProjectQuincy.svg?branch=dev-2.2
     :target: https://travis-ci.org/jabauer/ProjectQuincy
