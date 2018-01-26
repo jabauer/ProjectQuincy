@@ -17,9 +17,9 @@ class OccupationInline(admin.StackedInline):
 	ordering = ('occupation_title',)
 
 from citations.models import Validation
-from django.contrib.contenttypes import generic
+from django.contrib.contenttypes.admin import GenericStackedInline
 
-class ValidationInline(generic.GenericStackedInline):
+class ValidationInline(GenericStackedInline):
 	model = Validation
 	extra = 0
 	ordering = ('citation',)

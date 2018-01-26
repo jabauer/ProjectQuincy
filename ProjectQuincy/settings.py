@@ -1,7 +1,6 @@
 # Django settings for ProjectQuincy project.
 
 DEBUG = True
-TEMPLATE_DEBUG = DEBUG
 
 import os
 
@@ -86,13 +85,6 @@ STATICFILES_FINDERS = (
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'jt6bf9zx^=&amp;4h0o0_e-%jknk$(i==qnqzlu!0l1*sqf@ph7u6u'
 
-# List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
-)
-
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -111,15 +103,18 @@ WSGI_APPLICATION = 'ProjectQuincy.wsgi.application'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'APP_DIRS': True,
         'DIRS' : [
             os.path.join(BASE_DIR, "templates")
         ],
         'OPTIONS': {
             'context_processors': [
-                "django.contrib.auth.context_processors.auth",
-                "ProjectQuincy.context_extras"
+                'django.contrib.auth.context_processors.auth',
+                'ProjectQuincy.context_extras'
             ],
+            'loaders' : [
+                'django.template.loaders.filesystem.Loader',
+                'django.template.loaders.app_directories.Loader',
+            ]
         }
     }
 ]

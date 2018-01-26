@@ -2,7 +2,10 @@
 #COMMUNICATION app
 
 from django.contrib import admin 
+from django.contrib.contenttypes.admin import GenericStackedInline
+
 from communication.models import Letter, Enclosure
+from citations.models import Validation
 
 class EnclosureInline(admin.TabularInline):
 	model = Enclosure
@@ -10,10 +13,7 @@ class EnclosureInline(admin.TabularInline):
 	readonly_fields = ['id']
 	extra = 1
 
-from citations.models import Validation
-from django.contrib.contenttypes import generic
-
-class ValidationInline(generic.GenericStackedInline):
+class ValidationInline(GenericStackedInline):
 	model = Validation
 	extra = 0
 

@@ -4,8 +4,8 @@
 
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
-from django.contrib.contenttypes import generic
 
 class Bibliography(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
@@ -39,7 +39,7 @@ class Validation(models.Model):
     auth_user = models.ForeignKey(User, null=True, blank=True)
     content_type = models.ForeignKey(ContentType)
     object_id = models.PositiveIntegerField()
-    content_object = generic.GenericForeignKey('content_type', 'object_id')
+    content_object = GenericForeignKey('content_type', 'object_id')
     supports = models.NullBooleanField(null=True, blank=True)
     citation = models.ForeignKey(Citation, null=True, blank=True)
     notes = models.TextField(blank=True)

@@ -4,9 +4,10 @@ from django.contrib import admin
 from activities.models import Assignment, AssignmentTitle, AssignmentType
 
 from citations.models import Validation
-from django.contrib.contenttypes import generic
+from django.contrib.contenttypes.admin import GenericStackedInline
 
-class ValidationInline(generic.GenericStackedInline):
+class ValidationInline(GenericStackedInline):
+
 	model = Validation
 	extra = 0
 

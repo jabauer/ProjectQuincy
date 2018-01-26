@@ -3,9 +3,11 @@
 from django.contrib import admin
 
 from citations.models import Validation
-from django.contrib.contenttypes import generic
+# from django.contrib.contenttypes import generic
+from django.contrib.contenttypes.admin import GenericStackedInline
 
-class ValidationInline(generic.GenericStackedInline):
+#class ValidationInline(generic.GenericStackedInline):
+class ValidationInline(GenericStackedInline):
 	model = Validation
 	extra = 0
 
