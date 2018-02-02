@@ -41,7 +41,7 @@ class Letter(models.Model):
 class Enclosure(models.Model):
     id = models.AutoField(primary_key=True)
     main_letter = models.ForeignKey(Letter, null=True, blank=True, related_name='letter_1')
-    enclosed_letter = models.ForeignKey(Letter, null=True, blank=True, related_name='letter_2')
+    enclosed_letter = models.ForeignKey(Letter, null=True, related_name='letter_2')
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)

@@ -10,7 +10,7 @@ from places.models import Location, State
 
 class Individual(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    name = models.CharField(max_length=765, blank=True)
+    name = models.CharField(max_length=765)
     sex = models.CharField(max_length=765, blank=True)
     birth_date = models.DateField(null=True, blank=True)
     death_date = models.DateField(null=True, blank=True)
@@ -34,7 +34,7 @@ class Individual(models.Model):
 
 class ResidenceType(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    name = models.CharField(max_length=765, blank=True)
+    name = models.CharField(max_length=765)
     temporary = models.NullBooleanField(null=True, blank=True)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
@@ -46,8 +46,8 @@ class ResidenceType(models.Model):
 
 class Residence(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    individual = models.ForeignKey(Individual, null=True, blank=True)
-    location = models.ForeignKey(Location, null=True, blank=True)
+    individual = models.ForeignKey(Individual, null=True)
+    location = models.ForeignKey(Location, null=True)
     residence_type = models.ForeignKey(ResidenceType, null=True, blank=True)
     start_year = models.IntegerField(null=True, blank=True)
     end_year = models.IntegerField(null=True, blank=True)
@@ -64,7 +64,7 @@ class Residence(models.Model):
 
 class OccupationType(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    name = models.CharField(max_length=765, blank=True)
+    name = models.CharField(max_length=765)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
@@ -76,7 +76,7 @@ class OccupationType(models.Model):
 
 class OccupationTitle(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    name = models.CharField(max_length=765, blank=True)
+    name = models.CharField(max_length=765)
     occupation_type = models.ForeignKey(OccupationType, null=True, blank=True)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
@@ -89,8 +89,8 @@ class OccupationTitle(models.Model):
 
 class Occupation(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    individual = models.ForeignKey(Individual, null=True, blank=True)
-    occupation_title = models.ForeignKey(OccupationTitle, null=True, blank=True)
+    individual = models.ForeignKey(Individual, null=True)
+    occupation_title = models.ForeignKey(OccupationTitle, null=True)
     start_year = models.IntegerField(null=True, blank=True)
     end_year = models.IntegerField(null=True, blank=True)
     notes = models.TextField(blank=True)
@@ -103,7 +103,7 @@ class Occupation(models.Model):
 
 class RelationshipType(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    name = models.CharField(max_length=765, blank=True)
+    name = models.CharField(max_length=765)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
@@ -114,9 +114,9 @@ class RelationshipType(models.Model):
 
 class Relationship(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    individual_id_1 = models.ForeignKey(Individual, null=True, db_column='individual_id_1', blank=True, related_name='individual_1')
-    individual_id_2 = models.ForeignKey(Individual, null=True, db_column='individual_id_2', blank=True, related_name='individual_2')
-    relationship_type = models.ForeignKey(RelationshipType, null=True, blank=True)
+    individual_id_1 = models.ForeignKey(Individual, null=True, db_column='individual_id_1', related_name='individual_1')
+    individual_id_2 = models.ForeignKey(Individual, null=True, db_column='individual_id_2', related_name='individual_2')
+    relationship_type = models.ForeignKey(RelationshipType, null=True)
     start_year = models.IntegerField(null=True, blank=True)
     end_year = models.IntegerField(null=True, blank=True)
     notes = models.TextField(blank=True)

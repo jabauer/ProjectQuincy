@@ -9,7 +9,7 @@ from places.models import Location
 
 class AssignmentType(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    name = models.CharField(max_length=765, blank=True)
+    name = models.CharField(max_length=765)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
@@ -21,8 +21,8 @@ class AssignmentType(models.Model):
 
 class AssignmentTitle(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    name = models.CharField(max_length=765, blank=True)
-    assignment_type = models.ForeignKey(AssignmentType, null=True, blank=True)
+    name = models.CharField(max_length=765)
+    assignment_type = models.ForeignKey(AssignmentType, null=True)
     temporary = models.NullBooleanField(null=True, blank=True)
     commissioned = models.NullBooleanField(null=True, blank=True)
     notes = models.TextField(blank=True)
@@ -52,7 +52,7 @@ class Assignment(models.Model):
 
 class OrganizationType(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    name = models.CharField(max_length=765, blank=True)
+    name = models.CharField(max_length=765)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
@@ -64,7 +64,7 @@ class OrganizationType(models.Model):
 
 class Organization(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    name = models.CharField(max_length=765, blank=True)
+    name = models.CharField(max_length=765)
     start_year = models.IntegerField(null=True, blank=True)
     end_year = models.IntegerField(null=True, blank=True)
     magazine_sending = models.NullBooleanField(null=True, blank=True)
@@ -82,7 +82,7 @@ class Organization(models.Model):
 
 class OrgEvolutionType(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    name = models.CharField(max_length=765, blank=True)
+    name = models.CharField(max_length=765)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
@@ -93,9 +93,9 @@ class OrgEvolutionType(models.Model):
 
 class OrgEvolution(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    org_1 = models.ForeignKey(Organization, null=True, blank=True, related_name='org_1')
-    org_2 = models.ForeignKey(Organization, null=True, blank=True, related_name='org_2')
-    org_evolution_type = models.ForeignKey(OrgEvolutionType, null=True, blank=True)
+    org_1 = models.ForeignKey(Organization, null=True, related_name='org_1')
+    org_2 = models.ForeignKey(Organization, null=True, related_name='org_2')
+    org_evolution_type = models.ForeignKey(OrgEvolutionType, null=True)
     date = models.DateField(null=True, blank=True)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
@@ -111,7 +111,7 @@ class OrgEvolution(models.Model):
 
 class RoleType(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    name = models.CharField(max_length=765, blank=True)
+    name = models.CharField(max_length=765)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
@@ -123,7 +123,7 @@ class RoleType(models.Model):
 
 class RoleTitle(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    name = models.CharField(max_length=765, blank=True)
+    name = models.CharField(max_length=765)
     role_type = models.ForeignKey(RoleType, null=True, blank=True)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)

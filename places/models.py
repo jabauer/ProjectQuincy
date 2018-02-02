@@ -7,7 +7,7 @@ from django.db import models
 
 class CoordinateSystem(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    short_name = models.CharField(max_length=150, blank=True)
+    short_name = models.CharField(max_length=150)
     long_name = models.CharField(max_length=765, blank=True)
     notes = models.TextField(blank=True)
     reference = models.CharField(max_length=765, blank=True)
@@ -21,7 +21,7 @@ class CoordinateSystem(models.Model):
 
 class Location(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    name = models.CharField(max_length=765, blank=True)
+    name = models.CharField(max_length=765)
     lat = models.FloatField(null=True, blank=True)
     long = models.FloatField(null=True, blank=True)
     notes = models.TextField(blank=True)
@@ -36,7 +36,7 @@ class Location(models.Model):
 
 class Region(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    name = models.CharField(max_length=765, blank=True)
+    name = models.CharField(max_length=765)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
@@ -48,8 +48,8 @@ class Region(models.Model):
 
 class InRegion(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    location = models.ForeignKey(Location, null=True, blank=True)
-    region = models.ForeignKey(Region, null=True, blank=True)
+    location = models.ForeignKey(Location, null=True)
+    region = models.ForeignKey(Region, null=True)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
@@ -61,7 +61,7 @@ class InRegion(models.Model):
 
 class Continent(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    name = models.CharField(max_length=765, blank=True)
+    name = models.CharField(max_length=765)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
     class Meta:
@@ -72,7 +72,7 @@ class Continent(models.Model):
 
 class State(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    name = models.CharField(max_length=765, blank=True)
+    name = models.CharField(max_length=765)
     continent = models.ForeignKey(Continent)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
@@ -85,8 +85,8 @@ class State(models.Model):
 
 class InState(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    location = models.ForeignKey(Location, null=True, blank=True)
-    state = models.ForeignKey(State, null=True, blank=True)
+    location = models.ForeignKey(Location, null=True)
+    state = models.ForeignKey(State, null=True)
     start_year = models.IntegerField(null=True, blank=True)
     end_year = models.IntegerField(null=True, blank=True)
     notes = models.TextField(blank=True)
@@ -100,7 +100,7 @@ class InState(models.Model):
 
 class Empire(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    name = models.CharField(max_length=765, blank=True)
+    name = models.CharField(max_length=765)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
@@ -112,8 +112,8 @@ class Empire(models.Model):
 
 class InEmpire(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    state = models.ForeignKey(State, null=True, blank=True)
-    empire = models.ForeignKey(Empire, null=True, blank=True)
+    state = models.ForeignKey(State, null=True)
+    empire = models.ForeignKey(Empire, null=True)
     start_year = models.IntegerField(null=True, blank=True)
     end_year = models.IntegerField(null=True, blank=True)
     notes = models.TextField(blank=True)
