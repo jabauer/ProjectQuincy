@@ -81,7 +81,7 @@ echo "$ vagrant ssh"
 echo "$ cd ProjectQuincy"
 echo "$ python manage.py runserver 0.0.0.0:8000"
 echo "You will need to create a superuser on the django site to view the admin backend"
-echo "$ python manage.py createsuperuse // then follow the prompts"
+echo "$ python manage.py createsuperuser // then follow the prompts"
 echo "---"
 echo "---"
 
