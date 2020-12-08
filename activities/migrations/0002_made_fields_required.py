@@ -15,11 +15,6 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterField(
             model_name='assignmenttitle',
-            name='assignment_type',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='activities.AssignmentType'),
-        ),
-        migrations.AlterField(
-            model_name='assignmenttitle',
             name='name',
             field=models.CharField(max_length=765),
         ),
@@ -37,21 +32,6 @@ class Migration(migrations.Migration):
             model_name='organizationtype',
             name='name',
             field=models.CharField(max_length=765),
-        ),
-        migrations.AlterField(
-            model_name='orgevolution',
-            name='org_1',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='org_1', to='activities.Organization'),
-        ),
-        migrations.AlterField(
-            model_name='orgevolution',
-            name='org_2',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='org_2', to='activities.Organization'),
-        ),
-        migrations.AlterField(
-            model_name='orgevolution',
-            name='org_evolution_type',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='activities.OrgEvolutionType'),
         ),
         migrations.AlterField(
             model_name='orgevolutiontype',

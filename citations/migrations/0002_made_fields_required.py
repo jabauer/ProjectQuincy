@@ -20,17 +20,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterField(
             model_name='citation',
-            name='bibliography',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='citations.Bibliography'),
-        ),
-        migrations.AlterField(
-            model_name='citation',
             name='title',
             field=models.CharField(max_length=765),
-        ),
-        migrations.AlterField(
-            model_name='validation',
-            name='citation',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='citations.Citation'),
         ),
     ]

@@ -22,7 +22,7 @@ class AssignmentType(models.Model):
 class AssignmentTitle(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
     name = models.CharField(max_length=765)
-    assignment_type = models.ForeignKey(AssignmentType, null=True)
+    assignment_type = models.ForeignKey(AssignmentType, on_delete=models.PROTECT, null=True)
     temporary = models.NullBooleanField(null=True, blank=True)
     commissioned = models.NullBooleanField(null=True, blank=True)
     notes = models.TextField(blank=True)
@@ -36,9 +36,9 @@ class AssignmentTitle(models.Model):
 
 class Assignment(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    individual = models.ForeignKey(Individual, null=True, blank=True)
-    assignment_title = models.ForeignKey(AssignmentTitle, null=True, blank=True)
-    location = models.ForeignKey(Location, null=True, blank=True)
+    individual = models.ForeignKey(Individual, on_delete=models.PROTECT, null=True, blank=True)
+    assignment_title = models.ForeignKey(AssignmentTitle, on_delete=models.PROTECT, null=True, blank=True)
+    location = models.ForeignKey(Location, on_delete=models.PROTECT, null=True, blank=True)
     start_year = models.IntegerField(null=True, blank=True)
     start_certain = models.NullBooleanField(null=True, blank=True)
     end_year = models.IntegerField(null=True, blank=True)
@@ -68,8 +68,8 @@ class Organization(models.Model):
     start_year = models.IntegerField(null=True, blank=True)
     end_year = models.IntegerField(null=True, blank=True)
     magazine_sending = models.NullBooleanField(null=True, blank=True)
-    organization_type = models.ForeignKey(OrganizationType, null=True, blank=True)
-    location = models.ForeignKey(Location, null=True, blank=True)
+    organization_type = models.ForeignKey(OrganizationType, on_delete=models.PROTECT, null=True, blank=True)
+    location = models.ForeignKey(Location, on_delete=models.PROTECT, null=True, blank=True)
     org_bio = models.TextField(blank=True)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
@@ -93,9 +93,9 @@ class OrgEvolutionType(models.Model):
 
 class OrgEvolution(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    org_1 = models.ForeignKey(Organization, null=True, related_name='org_1')
-    org_2 = models.ForeignKey(Organization, null=True, related_name='org_2')
-    org_evolution_type = models.ForeignKey(OrgEvolutionType, null=True)
+    org_1 = models.ForeignKey(Organization, on_delete=models.PROTECT, null=True, related_name='org_1')
+    org_2 = models.ForeignKey(Organization, on_delete=models.PROTECT, null=True, related_name='org_2')
+    org_evolution_type = models.ForeignKey(OrgEvolutionType, on_delete=models.PROTECT, null=True)
     date = models.DateField(null=True, blank=True)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
@@ -124,7 +124,7 @@ class RoleType(models.Model):
 class RoleTitle(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
     name = models.CharField(max_length=765)
-    role_type = models.ForeignKey(RoleType, null=True, blank=True)
+    role_type = models.ForeignKey(RoleType, on_delete=models.PROTECT, null=True, blank=True)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
@@ -136,9 +136,9 @@ class RoleTitle(models.Model):
 
 class Member(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    individual = models.ForeignKey(Individual, null=True, blank=True)
-    organization = models.ForeignKey(Organization, null=True, blank=True)
-    role_title = models.ForeignKey(RoleTitle, null=True, blank=True)
+    individual = models.ForeignKey(Individual, on_delete=models.PROTECT, null=True, blank=True)
+    organization = models.ForeignKey(Organization, on_delete=models.PROTECT, null=True, blank=True)
+    role_title = models.ForeignKey(RoleTitle, on_delete=models.PROTECT, null=True, blank=True)
     start_year = models.IntegerField(null=True, blank=True)
     end_year = models.IntegerField(null=True, blank=True)
     notes = models.TextField(blank=True)

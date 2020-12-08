@@ -51,5 +51,5 @@ urlpatterns = [
     url(r'^assignment_by_type.json$', activities_views.assignment_by_type),
 
     # Uncomment the next line to enable the admin:
-    url(r'^admin/', include(admin.site.urls))
+    url(r'^admin/', admin.site.urls)
     ]

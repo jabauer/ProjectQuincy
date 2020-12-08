@@ -29,36 +29,6 @@ class Migration(migrations.Migration):
             field=models.CharField(max_length=765),
         ),
         migrations.AlterField(
-            model_name='inempire',
-            name='empire',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='places.Empire'),
-        ),
-        migrations.AlterField(
-            model_name='inempire',
-            name='state',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='places.State'),
-        ),
-        migrations.AlterField(
-            model_name='inregion',
-            name='location',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='places.Location'),
-        ),
-        migrations.AlterField(
-            model_name='inregion',
-            name='region',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='places.Region'),
-        ),
-        migrations.AlterField(
-            model_name='instate',
-            name='location',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='places.Location'),
-        ),
-        migrations.AlterField(
-            model_name='instate',
-            name='state',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='places.State'),
-        ),
-        migrations.AlterField(
             model_name='location',
             name='name',
             field=models.CharField(max_length=765),

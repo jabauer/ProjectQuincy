@@ -4,7 +4,7 @@ These tests handle models and views related to the Organizations
 	and Assigments Modules
 """
 
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.test import TestCase
 
 

@@ -9,12 +9,12 @@ from activities.models import Organization
 
 class Letter(models.Model):
     id = models.AutoField(primary_key=True)
-    from_individual = models.ForeignKey(Individual, null=True, blank=True, related_name='individual_from')
-    from_organization = models.ForeignKey(Organization, null=True, blank=True, related_name='organization_from')
-    from_location = models.ForeignKey(Location, null=True, blank=True, related_name='location_from')
-    to_individual = models.ForeignKey(Individual, null=True, blank=True, related_name='individual_to')
-    to_organization = models.ForeignKey(Organization, null=True, blank=True, related_name='organization_to')
-    to_location = models.ForeignKey(Location, null=True, blank=True, related_name='location_to')
+    from_individual = models.ForeignKey(Individual, on_delete=models.PROTECT, null=True, blank=True, related_name='individual_from')
+    from_organization = models.ForeignKey(Organization, on_delete=models.PROTECT, null=True, blank=True, related_name='organization_from')
+    from_location = models.ForeignKey(Location, on_delete=models.PROTECT, null=True, blank=True, related_name='location_from')
+    to_individual = models.ForeignKey(Individual, on_delete=models.PROTECT, null=True, blank=True, related_name='individual_to')
+    to_organization = models.ForeignKey(Organization, on_delete=models.PROTECT, null=True, blank=True, related_name='organization_to')
+    to_location = models.ForeignKey(Location, on_delete=models.PROTECT, null=True, blank=True, related_name='location_to')
     circular = models.NullBooleanField(null=True, blank=True)
     date_sent = models.DateField(null=True, blank=True)
     date_received = models.DateField(null=True, blank=True)
@@ -40,8 +40,8 @@ class Letter(models.Model):
 
 class Enclosure(models.Model):
     id = models.AutoField(primary_key=True)
-    main_letter = models.ForeignKey(Letter, null=True, blank=True, related_name='letter_1')
-    enclosed_letter = models.ForeignKey(Letter, null=True, related_name='letter_2')
+    main_letter = models.ForeignKey(Letter, on_delete=models.PROTECT, null=True, blank=True, related_name='letter_1')
+    enclosed_letter = models.ForeignKey(Letter, on_delete=models.PROTECT, null=True, related_name='letter_2')
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)

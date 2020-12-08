@@ -2,7 +2,7 @@
 This file contains the tests for the PEOPLE APP
 """
 
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.test import TestCase
 
 from .models import Individual, ResidenceType, Residence, OccupationType, OccupationTitle, Occupation, RelationshipType, Relationship

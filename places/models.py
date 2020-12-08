@@ -25,7 +25,7 @@ class Location(models.Model):
     lat = models.FloatField(null=True, blank=True)
     long = models.FloatField(null=True, blank=True)
     notes = models.TextField(blank=True)
-    coordinate_system = models.ForeignKey(CoordinateSystem, null=True, blank=True)
+    coordinate_system = models.ForeignKey(CoordinateSystem, on_delete=models.PROTECT, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
     class Meta:
@@ -48,8 +48,8 @@ class Region(models.Model):
 
 class InRegion(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    location = models.ForeignKey(Location, null=True)
-    region = models.ForeignKey(Region, null=True)
+    location = models.ForeignKey(Location, on_delete=models.PROTECT, null=True)
+    region = models.ForeignKey(Region, on_delete=models.PROTECT, null=True)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
@@ -85,8 +85,8 @@ class State(models.Model):
 
 class InState(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    location = models.ForeignKey(Location, null=True)
-    state = models.ForeignKey(State, null=True)
+    location = models.ForeignKey(Location, on_delete=models.PROTECT, null=True)
+    state = models.ForeignKey(State, on_delete=models.PROTECT, null=True)
     start_year = models.IntegerField(null=True, blank=True)
     end_year = models.IntegerField(null=True, blank=True)
     notes = models.TextField(blank=True)
@@ -112,8 +112,8 @@ class Empire(models.Model):
 
 class InEmpire(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    state = models.ForeignKey(State, null=True)
-    empire = models.ForeignKey(Empire, null=True)
+    state = models.ForeignKey(State, on_delete=models.PROTECT, null=True)
+    empire = models.ForeignKey(Empire, on_delete=models.PROTECT, null=True)
     start_year = models.IntegerField(null=True, blank=True)
     end_year = models.IntegerField(null=True, blank=True)
     notes = models.TextField(blank=True)

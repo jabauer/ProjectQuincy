@@ -22,7 +22,7 @@ class Bibliography(models.Model):
 class Citation(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
     title = models.CharField(max_length=765)
-    bibliography = models.ForeignKey(Bibliography, null=True)
+    bibliography = models.ForeignKey(Bibliography, on_delete=models.PROTECT, null=True)
     pages = models.CharField(max_length=765, blank=True)
     canonic_url = models.CharField(max_length=765, blank=True)
     notes = models.TextField(blank=True)
@@ -36,12 +36,12 @@ class Citation(models.Model):
 
 class Validation(models.Model):
     id = models.AutoField(primary_key=True, editable=False)
-    auth_user = models.ForeignKey(User, null=True, blank=True)
+    auth_user = models.ForeignKey(User, on_delete=models.PROTECT, null=True, blank=True)
     content_type = models.ForeignKey(ContentType)
     object_id = models.PositiveIntegerField()
     content_object = GenericForeignKey('content_type', 'object_id')
     supports = models.NullBooleanField(null=True, blank=True)
-    citation = models.ForeignKey(Citation, null=True)
+    citation = models.ForeignKey(Citation, on_delete=models.PROTECT, null=True)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)

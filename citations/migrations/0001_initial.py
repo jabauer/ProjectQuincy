@@ -37,7 +37,7 @@ class Migration(migrations.Migration):
                 ('notes', models.TextField(blank=True)),
                 ('created_at', models.DateTimeField(auto_now_add=True, null=True)),
                 ('updated_at', models.DateTimeField(auto_now=True, null=True)),
-                ('bibliography', models.ForeignKey(blank=True, to='citations.Bibliography', null=True)),
+                ('bibliography', models.ForeignKey(on_delete=models.PROTECT, blank=True, to='citations.Bibliography', null=True)),
             ],
             options={
                 'db_table': 'citations',
@@ -52,9 +52,9 @@ class Migration(migrations.Migration):
                 ('notes', models.TextField(blank=True)),
                 ('created_at', models.DateTimeField(auto_now_add=True, null=True)),
                 ('updated_at', models.DateTimeField(auto_now=True, null=True)),
-                ('auth_user', models.ForeignKey(blank=True, to=settings.AUTH_USER_MODEL, null=True)),
-                ('citation', models.ForeignKey(blank=True, to='citations.Citation', null=True)),
-                ('content_type', models.ForeignKey(to='contenttypes.ContentType')),
+                ('auth_user', models.ForeignKey(on_delete=models.PROTECT, blank=True, to=settings.AUTH_USER_MODEL, null=True)),
+                ('citation', models.ForeignKey(on_delete=models.PROTECT, blank=True, to='citations.Citation', null=True)),
+                ('content_type', models.ForeignKey(on_delete=models.PROTECT, to='contenttypes.ContentType')),
             ],
             options={
                 'db_table': 'validations',

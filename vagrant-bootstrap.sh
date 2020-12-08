@@ -24,9 +24,10 @@ sudo cp -f /usr/share/zoneinfo/$area/$zone /etc/localtime
 ## main server installs ##
 
 #basics (bjd- needed?)
-sudo apt-get install -y git-core mercurial vim screen wget curl raptor-utils unzip
+sudo apt-get install -y git-core mercurial vim screen wget curl raptor2-utils unzip
 sudo apt-get install -y tree
 sudo apt-get install -y python-pip
+sudo pip install --upgrade pip
 #sudo pip install iPython
 
 #apache
@@ -36,7 +37,7 @@ sudo apt-get install -y apache2
 sudo apt-get install -y python python-dev python-mysqldb python-lxml python-virtualenv
 sudo apt-get install -y libmysqlclient-dev
 
-sudo apt-get install -y python-software-properties #required for add-apt-repository command below
+sudo apt-get install -y software-properties-common #required for add-apt-repository command below
 sudo apt-get update -y
 
 #MySQL

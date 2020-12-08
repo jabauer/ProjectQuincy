@@ -59,7 +59,7 @@ class Migration(migrations.Migration):
                 ('notes', models.TextField(blank=True)),
                 ('created_at', models.DateTimeField(auto_now_add=True, null=True)),
                 ('updated_at', models.DateTimeField(auto_now=True, null=True)),
-                ('empire', models.ForeignKey(blank=True, to='places.Empire', null=True)),
+                ('empire', models.ForeignKey(on_delete=models.PROTECT, blank=True, to='places.Empire', null=True)),
             ],
             options={
                 'db_table': 'in_empires',
@@ -101,7 +101,7 @@ class Migration(migrations.Migration):
                 ('notes', models.TextField(blank=True)),
                 ('created_at', models.DateTimeField(auto_now_add=True, null=True)),
                 ('updated_at', models.DateTimeField(auto_now=True, null=True)),
-                ('coordinate_system', models.ForeignKey(blank=True, to='places.CoordinateSystem', null=True)),
+                ('coordinate_system', models.ForeignKey(on_delete=models.PROTECT, blank=True, to='places.CoordinateSystem', null=True)),
             ],
             options={
                 'db_table': 'locations',
@@ -128,7 +128,7 @@ class Migration(migrations.Migration):
                 ('notes', models.TextField(blank=True)),
                 ('created_at', models.DateTimeField(auto_now_add=True, null=True)),
                 ('updated_at', models.DateTimeField(auto_now=True, null=True)),
-                ('continent', models.ForeignKey(to='places.Continent')),
+                ('continent', models.ForeignKey(on_delete=models.PROTECT, to='places.Continent')),
             ],
             options={
                 'db_table': 'states',
@@ -137,26 +137,26 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='instate',
             name='location',
-            field=models.ForeignKey(blank=True, to='places.Location', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, blank=True, to='places.Location', null=True),
         ),
         migrations.AddField(
             model_name='instate',
             name='state',
-            field=models.ForeignKey(blank=True, to='places.State', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, blank=True, to='places.State', null=True),
         ),
         migrations.AddField(
             model_name='inregion',
             name='location',
-            field=models.ForeignKey(blank=True, to='places.Location', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, blank=True, to='places.Location', null=True),
         ),
         migrations.AddField(
             model_name='inregion',
             name='region',
-            field=models.ForeignKey(blank=True, to='places.Region', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, blank=True, to='places.Region', null=True),
         ),
         migrations.AddField(
             model_name='inempire',
             name='state',
-            field=models.ForeignKey(blank=True, to='places.State', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, blank=True, to='places.State', null=True),
         ),
     ]

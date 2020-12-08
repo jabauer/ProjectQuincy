@@ -19,16 +19,6 @@ class Migration(migrations.Migration):
             field=models.CharField(max_length=765),
         ),
         migrations.AlterField(
-            model_name='occupation',
-            name='individual',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='people.Individual'),
-        ),
-        migrations.AlterField(
-            model_name='occupation',
-            name='occupation_title',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='people.OccupationTitle'),
-        ),
-        migrations.AlterField(
             model_name='occupationtitle',
             name='name',
             field=models.CharField(max_length=765),
@@ -39,34 +29,9 @@ class Migration(migrations.Migration):
             field=models.CharField(max_length=765),
         ),
         migrations.AlterField(
-            model_name='relationship',
-            name='individual_id_1',
-            field=models.ForeignKey(db_column=b'individual_id_1', null=True, on_delete=django.db.models.deletion.CASCADE, related_name='individual_1', to='people.Individual'),
-        ),
-        migrations.AlterField(
-            model_name='relationship',
-            name='individual_id_2',
-            field=models.ForeignKey(db_column=b'individual_id_2', null=True, on_delete=django.db.models.deletion.CASCADE, related_name='individual_2', to='people.Individual'),
-        ),
-        migrations.AlterField(
-            model_name='relationship',
-            name='relationship_type',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='people.RelationshipType'),
-        ),
-        migrations.AlterField(
             model_name='relationshiptype',
             name='name',
             field=models.CharField(max_length=765),
-        ),
-        migrations.AlterField(
-            model_name='residence',
-            name='individual',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='people.Individual'),
-        ),
-        migrations.AlterField(
-            model_name='residence',
-            name='location',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='places.Location'),
         ),
         migrations.AlterField(
             model_name='residencetype',

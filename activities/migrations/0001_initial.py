@@ -63,7 +63,7 @@ class Migration(migrations.Migration):
                 ('notes', models.TextField(blank=True)),
                 ('created_at', models.DateTimeField(auto_now_add=True, null=True)),
                 ('updated_at', models.DateTimeField(auto_now=True, null=True)),
-                ('individual', models.ForeignKey(blank=True, to='people.Individual', null=True)),
+                ('individual', models.ForeignKey(on_delete=models.PROTECT, blank=True, to='people.Individual', null=True)),
             ],
             options={
                 'db_table': 'members',
@@ -81,7 +81,7 @@ class Migration(migrations.Migration):
                 ('notes', models.TextField(blank=True)),
                 ('created_at', models.DateTimeField(auto_now_add=True, null=True)),
                 ('updated_at', models.DateTimeField(auto_now=True, null=True)),
-                ('location', models.ForeignKey(blank=True, to='places.Location', null=True)),
+                ('location', models.ForeignKey(on_delete=models.PROTECT, blank=True, to='places.Location', null=True)),
             ],
             options={
                 'db_table': 'organizations',
@@ -111,8 +111,8 @@ class Migration(migrations.Migration):
                 ('day_known', models.NullBooleanField()),
                 ('month_known', models.NullBooleanField()),
                 ('year_known', models.NullBooleanField()),
-                ('org_1', models.ForeignKey(related_name='org_1', blank=True, to='activities.Organization', null=True)),
-                ('org_2', models.ForeignKey(related_name='org_2', blank=True, to='activities.Organization', null=True)),
+                ('org_1', models.ForeignKey(on_delete=models.PROTECT, related_name='org_1', blank=True, to='activities.Organization', null=True)),
+                ('org_2', models.ForeignKey(on_delete=models.PROTECT, related_name='org_2', blank=True, to='activities.Organization', null=True)),
             ],
             options={
                 'db_table': 'org_evolutions',
@@ -160,46 +160,46 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='roletitle',
             name='role_type',
-            field=models.ForeignKey(blank=True, to='activities.RoleType', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, blank=True, to='activities.RoleType', null=True),
         ),
         migrations.AddField(
             model_name='orgevolution',
             name='org_evolution_type',
-            field=models.ForeignKey(blank=True, to='activities.OrgEvolutionType', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, blank=True, to='activities.OrgEvolutionType', null=True),
         ),
         migrations.AddField(
             model_name='organization',
             name='organization_type',
-            field=models.ForeignKey(blank=True, to='activities.OrganizationType', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, blank=True, to='activities.OrganizationType', null=True),
         ),
         migrations.AddField(
             model_name='member',
             name='organization',
-            field=models.ForeignKey(blank=True, to='activities.Organization', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, blank=True, to='activities.Organization', null=True),
         ),
         migrations.AddField(
             model_name='member',
             name='role_title',
-            field=models.ForeignKey(blank=True, to='activities.RoleTitle', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, blank=True, to='activities.RoleTitle', null=True),
         ),
         migrations.AddField(
             model_name='assignmenttitle',
             name='assignment_type',
-            field=models.ForeignKey(blank=True, to='activities.AssignmentType', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, blank=True, to='activities.AssignmentType', null=True),
         ),
         migrations.AddField(
             model_name='assignment',
             name='assignment_title',
-            field=models.ForeignKey(blank=True, to='activities.AssignmentTitle', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, blank=True, to='activities.AssignmentTitle', null=True),
         ),
         migrations.AddField(
             model_name='assignment',
             name='individual',
-            field=models.ForeignKey(blank=True, to='people.Individual', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, blank=True, to='people.Individual', null=True),
         ),
         migrations.AddField(
             model_name='assignment',
             name='location',
-            field=models.ForeignKey(blank=True, to='places.Location', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, blank=True, to='places.Location', null=True),
         ),
     ]

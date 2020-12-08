@@ -4,7 +4,7 @@ These tests handle modles and views related to the
 	Locations Module
 """
 
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.test import TestCase
 
 from .models import CoordinateSystem, Location, Region, InRegion, Continent, State, InState, Empire, InEmpire

@@ -30,7 +30,7 @@ class Migration(migrations.Migration):
                 ('death_day_known', models.NullBooleanField()),
                 ('death_month_known', models.NullBooleanField()),
                 ('death_year_known', models.NullBooleanField()),
-                ('state', models.ForeignKey(blank=True, to='places.State', null=True)),
+                ('state', models.ForeignKey(on_delete=models.PROTECT, blank=True, to='places.State', null=True)),
             ],
             options={
                 'db_table': 'individuals',
@@ -45,7 +45,7 @@ class Migration(migrations.Migration):
                 ('notes', models.TextField(blank=True)),
                 ('created_at', models.DateTimeField(auto_now_add=True, null=True)),
                 ('updated_at', models.DateTimeField(auto_now=True, null=True)),
-                ('individual', models.ForeignKey(blank=True, to='people.Individual', null=True)),
+                ('individual', models.ForeignKey(on_delete=models.PROTECT, blank=True, to='people.Individual', null=True)),
             ],
             options={
                 'db_table': 'occupations',
@@ -86,8 +86,8 @@ class Migration(migrations.Migration):
                 ('notes', models.TextField(blank=True)),
                 ('created_at', models.DateTimeField(auto_now_add=True, null=True)),
                 ('updated_at', models.DateTimeField(auto_now=True, null=True)),
-                ('individual_id_1', models.ForeignKey(related_name='individual_1', db_column=b'individual_id_1', blank=True, to='people.Individual', null=True)),
-                ('individual_id_2', models.ForeignKey(related_name='individual_2', db_column=b'individual_id_2', blank=True, to='people.Individual', null=True)),
+                ('individual_id_1', models.ForeignKey(on_delete=models.PROTECT, related_name='individual_1', db_column=b'individual_id_1', blank=True, to='people.Individual', null=True)),
+                ('individual_id_2', models.ForeignKey(on_delete=models.PROTECT, related_name='individual_2', db_column=b'individual_id_2', blank=True, to='people.Individual', null=True)),
             ],
             options={
                 'db_table': 'relationships',
@@ -117,8 +117,8 @@ class Migration(migrations.Migration):
                 ('notes', models.TextField(blank=True)),
                 ('created_at', models.DateTimeField(auto_now_add=True, null=True)),
                 ('updated_at', models.DateTimeField(auto_now=True, null=True)),
-                ('individual', models.ForeignKey(blank=True, to='people.Individual', null=True)),
-                ('location', models.ForeignKey(blank=True, to='places.Location', null=True)),
+                ('individual', models.ForeignKey(on_delete=models.PROTECT, blank=True, to='people.Individual', null=True)),
+                ('location', models.ForeignKey(on_delete=models.PROTECT, blank=True, to='places.Location', null=True)),
             ],
             options={
                 'db_table': 'residences',
@@ -141,21 +141,21 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='residence',
             name='residence_type',
-            field=models.ForeignKey(blank=True, to='people.ResidenceType', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, blank=True, to='people.ResidenceType', null=True),
         ),
         migrations.AddField(
             model_name='relationship',
             name='relationship_type',
-            field=models.ForeignKey(blank=True, to='people.RelationshipType', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, blank=True, to='people.RelationshipType', null=True),
         ),
         migrations.AddField(
             model_name='occupationtitle',
             name='occupation_type',
-            field=models.ForeignKey(blank=True, to='people.OccupationType', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, blank=True, to='people.OccupationType', null=True),
         ),
         migrations.AddField(
             model_name='occupation',
             name='occupation_title',
-            field=models.ForeignKey(blank=True, to='people.OccupationTitle', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, blank=True, to='people.OccupationTitle', null=True),
         ),
     ]

@@ -46,12 +46,12 @@ class Migration(migrations.Migration):
                 ('docketed_year_known', models.NullBooleanField()),
                 ('created_at', models.DateTimeField(auto_now_add=True, null=True)),
                 ('updated_at', models.DateTimeField(auto_now=True, null=True)),
-                ('from_individual', models.ForeignKey(related_name='individual_from', blank=True, to='people.Individual', null=True)),
-                ('from_location', models.ForeignKey(related_name='location_from', blank=True, to='places.Location', null=True)),
-                ('from_organization', models.ForeignKey(related_name='organization_from', blank=True, to='activities.Organization', null=True)),
-                ('to_individual', models.ForeignKey(related_name='individual_to', blank=True, to='people.Individual', null=True)),
-                ('to_location', models.ForeignKey(related_name='location_to', blank=True, to='places.Location', null=True)),
-                ('to_organization', models.ForeignKey(related_name='organization_to', blank=True, to='activities.Organization', null=True)),
+                ('from_individual', models.ForeignKey(on_delete=models.PROTECT, related_name='individual_from', blank=True, to='people.Individual', null=True)),
+                ('from_location', models.ForeignKey(on_delete=models.PROTECT, related_name='location_from', blank=True, to='places.Location', null=True)),
+                ('from_organization', models.ForeignKey(on_delete=models.PROTECT, related_name='organization_from', blank=True, to='activities.Organization', null=True)),
+                ('to_individual', models.ForeignKey(on_delete=models.PROTECT, related_name='individual_to', blank=True, to='people.Individual', null=True)),
+                ('to_location', models.ForeignKey(on_delete=models.PROTECT, related_name='location_to', blank=True, to='places.Location', null=True)),
+                ('to_organization', models.ForeignKey(on_delete=models.PROTECT, related_name='organization_to', blank=True, to='activities.Organization', null=True)),
             ],
             options={
                 'db_table': 'letters',
@@ -60,11 +60,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='enclosure',
             name='enclosed_letter',
-            field=models.ForeignKey(related_name='letter_2', blank=True, to='communication.Letter', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, related_name='letter_2', blank=True, to='communication.Letter', null=True),
         ),
         migrations.AddField(
             model_name='enclosure',
             name='main_letter',
-            field=models.ForeignKey(related_name='letter_1', blank=True, to='communication.Letter', null=True),
+            field=models.ForeignKey(on_delete=models.PROTECT, related_name='letter_1', blank=True, to='communication.Letter', null=True),
         ),
     ]
