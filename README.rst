@@ -3,9 +3,12 @@ Project Quincy
 
 .. sphinx-start-marker-do-not-remove
 
-Project Quincy is an open source Django, MySQL application for tracing historical networks through time and space.
+Project Quincy is an open source Django, MySQL application for tracing historical networks through time and space. It has a module structure which you can view in /static/images/diagrams/. Project Quincy is named after John Quincy Adams.
 
 The code in this repository runs `The Early American Foreign Service Database` www.eafsd.org
+
+This project is not being actively developed. I (Jean Bauer), have every intention of getting back to it someday but at this point it requires a complete rewrite, so if you are interested in helping please contact me.
+
 
 2.2.0
 ======
